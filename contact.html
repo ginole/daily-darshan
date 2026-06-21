@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Daily Darshan</title>
+<meta name="description" content="Get in touch with the team behind Daily Darshan.">
+<style>
+:root {
+  --deep-maroon: #2b0f12;
+  --temple-red: #6b1622;
+  --marigold: #e8a13d;
+  --gold: #d4a544;
+  --gold-bright: #f4c95d;
+  --cream: #f3e7d3;
+  --smoke: #1a0a0c;
+  --sandalwood: #c98a4b;
+  --font-display: 'Tiro Devanagari Hindi', Georgia, serif;
+  --font-body: 'Mukta', 'Segoe UI', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&family=Mukta:wght@300;400;500;600;700&family=Cinzel:wght@500;700&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  background: var(--smoke);
+  background-image:
+    radial-gradient(ellipse at top, rgba(107,22,34,0.4) 0%, transparent 60%),
+    radial-gradient(ellipse at bottom, rgba(43,15,18,0.6) 0%, transparent 60%);
+  color: var(--cream);
+  font-family: var(--font-body);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.grain {
+  position: fixed; inset: 0; pointer-events: none; z-index: 1;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ---------- Top utility nav ---------- */
+.top-nav {
+  position: relative; z-index: 5;
+  display: flex; justify-content: center; gap: 18px;
+  padding: 14px 16px 0;
+  font-size: 11.5px;
+  letter-spacing: 0.05em;
+}
+.top-nav a {
+  color: rgba(243,231,211,0.55);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+}
+.top-nav a:hover { color: var(--gold-bright); border-color: var(--gold-bright); }
+
+/* ---------- Header ---------- */
+header {
+  position: relative;
+  z-index: 5;
+  text-align: center;
+  padding: 28px 20px 24px;
+}
+
+.brand-mark {
+  font-family: var(--font-display);
+  font-size: 15px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--marigold);
+  opacity: 0.85;
+}
+
+h1.site-title {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(26px, 8vw, 44px);
+  font-weight: 700;
+  color: var(--gold-bright);
+  text-shadow: 0 0 24px rgba(244,201,93,0.35);
+  margin-top: 6px;
+  letter-spacing: 0.02em;
+}
+
+.site-title a { color: inherit; text-decoration: none; }
+
+.site-tagline {
+  margin-top: 8px;
+  font-size: 14px;
+  color: rgba(243,231,211,0.65);
+  font-style: italic;
+}
+
+/* ---------- Ad slot ---------- */
+.ad-slot {
+  position: relative;
+  z-index: 5;
+  max-width: 320px;
+  margin: 0 auto 24px;
+  padding: 8px;
+  border: 1px dashed rgba(212,165,68,0.3);
+  border-radius: 6px;
+  text-align: center;
+  font-size: 10px;
+  line-height: 1.4;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(212,165,68,0.45);
+  background: rgba(0,0,0,0.15);
+}
+.ad-slot.leaderboard { min-height: 50px; display: flex; align-items: center; justify-content: center; }
+
+@media (min-width: 768px) {
+  .ad-slot { max-width: 728px; font-size: 11px; padding: 10px; }
+  .ad-slot.leaderboard { min-height: 90px; }
+}
+
+/* ---------- Deity grid ---------- */
+.deity-grid {
+  position: relative;
+  z-index: 5;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 16px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (min-width: 700px) {
+  .deity-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    padding: 0 20px 60px;
+  }
+}
+
+.deity-card {
+  background: linear-gradient(165deg, rgba(107,22,34,0.55), rgba(26,10,12,0.85));
+  border: 1px solid rgba(212,165,68,0.25);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.deity-card::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, transparent 60%, rgba(0,0,0,0.5) 100%);
+  z-index: 2; pointer-events: none;
+}
+.deity-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(212,165,68,0.15);
+  border-color: rgba(244,201,93,0.5);
+}
+
+.deity-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  filter: saturate(1.05) contrast(1.05);
+}
+
+@media (min-width: 700px) {
+  .deity-card img { height: 280px; }
+}
+
+.deity-card .card-frame {
+  position: absolute; inset: 8px;
+  border: 1px solid rgba(244,201,93,0.35);
+  pointer-events: none; z-index: 3;
+}
+
+.deity-info {
+  position: relative; z-index: 3;
+  padding: 18px 20px 24px;
+}
+
+.deity-name-script {
+  font-family: var(--font-display);
+  font-size: 22px;
+  color: var(--gold-bright);
+}
+
+.deity-name-en {
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(243,231,211,0.6);
+  margin-top: 2px;
+}
+
+.deity-epithet {
+  margin-top: 10px;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: rgba(243,231,211,0.8);
+}
+
+.enter-btn {
+  margin-top: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold-bright);
+  border-bottom: 1px solid var(--gold-bright);
+  padding-bottom: 2px;
+}
+
+/* ---------- Intro copy block on homepage ---------- */
+.intro-copy {
+  position: relative; z-index: 5;
+  max-width: 720px;
+  margin: 0 auto 36px;
+  padding: 0 20px;
+  font-size: 14px;
+  line-height: 1.75;
+  color: rgba(243,231,211,0.7);
+  text-align: center;
+}
+
+/* ---------- Shrine view ---------- */
+.shrine-view {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background: var(--smoke);
+  overflow-y: auto;
+}
+.shrine-view.active { display: block; }
+
+.shrine-backdrop {
+  position: fixed; inset: 0; z-index: -1;
+  background-size: cover;
+  background-position: center 20%;
+  filter: blur(2px) brightness(0.35) saturate(1.1);
+  transform: scale(1.05);
+}
+
+.shrine-close {
+  position: fixed;
+  top: 14px; right: 14px;
+  z-index: 60;
+  background: rgba(0,0,0,0.55);
+  border: 1px solid rgba(244,201,93,0.4);
+  color: var(--gold-bright);
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+}
+
+.shrine-inner {
+  position: relative;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 64px 18px 60px;
+  text-align: center;
+}
+
+@media (min-width: 700px) {
+  .shrine-inner { padding: 70px 24px 80px; }
+}
+
+.shrine-portrait {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 16px;
+  border: 3px solid var(--gold);
+  box-shadow: 0 0 0 6px rgba(212,165,68,0.12), 0 16px 44px rgba(0,0,0,0.6);
+}
+
+@media (min-width: 700px) {
+  .shrine-portrait {
+    width: 220px; height: 220px;
+    margin-bottom: 18px;
+    box-shadow: 0 0 0 8px rgba(212,165,68,0.12), 0 20px 60px rgba(0,0,0,0.6);
+  }
+}
+
+.shrine-name-script {
+  font-family: var(--font-display);
+  font-size: 32px;
+  color: var(--gold-bright);
+}
+.shrine-name-en {
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(243,231,211,0.6);
+  margin-top: 4px;
+}
+
+.shrine-mantra {
+  margin-top: 18px;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 17px;
+  color: var(--marigold);
+  line-height: 1.8;
+}
+
+.shrine-desc {
+  margin-top: 16px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(243,231,211,0.75);
+  max-width: 480px;
+  margin-left: auto; margin-right: auto;
+  text-align: left;
+}
+.shrine-desc p { margin-bottom: 12px; }
+.shrine-desc strong { color: var(--marigold); }
+
+/* ---------- Offering altar ---------- */
+.altar {
+  margin-top: 40px;
+  background: rgba(0,0,0,0.35);
+  border: 1px solid rgba(212,165,68,0.25);
+  border-radius: 8px;
+  padding: 28px 20px;
+}
+
+.altar-label {
+  font-size: 11.5px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(212,165,68,0.6);
+  margin-bottom: 18px;
+}
+
+.offering-stage {
+  position: relative;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.diya {
+  font-size: 64px;
+  filter: drop-shadow(0 0 18px rgba(244,201,93,0.4));
+  animation: flicker 2.2s ease-in-out infinite;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+@keyframes flicker {
+  0%, 100% { transform: scale(1) rotate(-1deg); filter: drop-shadow(0 0 18px rgba(244,201,93,0.4)); }
+  50% { transform: scale(1.04) rotate(1deg); filter: drop-shadow(0 0 28px rgba(244,201,93,0.6)); }
+}
+
+.offering-glow {
+  position: absolute;
+  width: 200px; height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(244,201,93,0.25), transparent 70%);
+  pointer-events: none;
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 0.9; transform: scale(1.15); }
+}
+
+.tier-badge {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1px solid rgba(212,165,68,0.4);
+  color: var(--gold-bright);
+  background: rgba(212,165,68,0.08);
+}
+
+.offering-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+@media (min-width: 600px) {
+  .offering-actions { flex-direction: row; flex-wrap: wrap; }
+}
+
+.btn {
+  font-family: var(--font-body);
+  font-size: 14.5px;
+  font-weight: 600;
+  padding: 14px 22px;
+  min-height: 48px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+}
+@media (min-width: 600px) {
+  .btn { width: auto; font-size: 13.5px; }
+}
+.btn:hover { transform: translateY(-2px); }
+.btn:active { transform: scale(0.97); }
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--gold-bright), var(--marigold));
+  color: var(--smoke);
+  box-shadow: 0 8px 24px rgba(212,165,68,0.3);
+}
+.btn-secondary {
+  background: rgba(255,255,255,0.06);
+  color: var(--cream);
+  border: 1px solid rgba(243,231,211,0.25);
+}
+.btn-share {
+  background: rgba(107,22,34,0.4);
+  color: var(--gold-bright);
+  border: 1px solid rgba(212,165,68,0.4);
+}
+.btn:disabled { opacity: 0.4; cursor: not-allowed; transform: none; }
+
+.unlock-note {
+  margin-top: 14px;
+  font-size: 12px;
+  color: rgba(243,231,211,0.5);
+  line-height: 1.6;
+}
+.unlock-note strong { color: var(--marigold); }
+
+/* ---------- About section (within shrine: deity story) ---------- */
+.shrine-about {
+  margin-top: 36px;
+  text-align: left;
+  padding-top: 24px;
+  border-top: 1px solid rgba(212,165,68,0.15);
+}
+.shrine-about .label {
+  font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
+  color: rgba(212,165,68,0.6); margin-bottom: 12px;
+}
+.shrine-about p {
+  font-size: 14px; line-height: 1.75; color: rgba(243,231,211,0.78);
+  margin-bottom: 12px;
+}
+.shrine-about strong { color: var(--marigold); }
+
+/* ---------- Daily blessing strip ---------- */
+.daily-strip {
+  margin-top: 32px;
+  padding: 20px;
+  border-top: 1px solid rgba(212,165,68,0.2);
+  border-bottom: 1px solid rgba(212,165,68,0.2);
+  text-align: left;
+}
+.daily-strip .label {
+  font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
+  color: rgba(212,165,68,0.6); margin-bottom: 8px;
+}
+.daily-strip .verse {
+  font-size: 14px; line-height: 1.7; color: rgba(243,231,211,0.85);
+  font-style: italic;
+}
+.daily-strip .verse-source {
+  margin-top: 10px; font-size: 11px; letter-spacing: 0.04em;
+  color: rgba(212,165,68,0.5); font-style: normal;
+}
+
+.ad-slot.inline {
+  margin: 36px auto 0;
+  min-height: 100px;
+}
+
+/* ---------- Toast ---------- */
+.toast {
+  position: fixed;
+  bottom: 28px; left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--gold-bright);
+  color: var(--smoke);
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-size: 13.5px;
+  font-weight: 600;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.35s ease;
+  z-index: 100;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  white-space: nowrap;
+  max-width: 90vw;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+/* ---------- Footer ---------- */
+footer {
+  position: relative; z-index: 5;
+  text-align: center;
+  padding: 30px 20px 50px;
+  font-size: 11.5px;
+  color: rgba(243,231,211,0.35);
+  line-height: 1.8;
+}
+footer a { color: rgba(212,165,68,0.6); text-decoration: none; }
+
+/* ---------- Ad mock modal (simulated rewarded ad) ---------- */
+.ad-modal-overlay {
+  display: none;
+  position: fixed; inset: 0; z-index: 200;
+  background: rgba(0,0,0,0.85);
+  align-items: center; justify-content: center;
+}
+.ad-modal-overlay.active { display: flex; }
+.ad-modal {
+  background: var(--deep-maroon);
+  border: 1px solid rgba(212,165,68,0.4);
+  border-radius: 10px;
+  padding: 36px 28px;
+  max-width: 320px;
+  text-align: center;
+}
+.ad-modal-label {
+  font-size: 10.5px; letter-spacing: 0.15em; text-transform: uppercase;
+  color: rgba(212,165,68,0.6); margin-bottom: 14px;
+}
+.ad-timer-ring {
+  width: 64px; height: 64px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  border: 3px solid rgba(212,165,68,0.2);
+  border-top-color: var(--gold-bright);
+  animation: spin 1s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.ad-modal p { font-size: 13px; color: rgba(243,231,211,0.7); }
+
+/* ---------- Static pages (About / Privacy / Contact) ---------- */
+.static-page {
+  position: relative; z-index: 5;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 36px 20px 60px;
+}
+.static-page h1 {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(24px, 6vw, 34px);
+  color: var(--gold-bright);
+  margin-bottom: 18px;
+}
+.static-page h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 18px;
+  color: var(--marigold);
+  margin: 28px 0 10px;
+}
+.static-page p, .static-page li {
+  font-size: 14px; line-height: 1.75; color: rgba(243,231,211,0.78);
+  margin-bottom: 14px;
+}
+.static-page ul { padding-left: 20px; margin-bottom: 14px; }
+.static-page a { color: var(--gold-bright); }
+.static-page .updated {
+  font-size: 12px; color: rgba(243,231,211,0.45); margin-bottom: 28px;
+}
+.contact-info {
+  background: rgba(0,0,0,0.3);
+  border: 1px solid rgba(212,165,68,0.25);
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 16px;
+}
+.contact-info p { margin-bottom: 8px; }
+
+/* Note: mobile sizing is the default (mobile-first).
+   Desktop enhancements are applied via min-width queries above. */
+
+</style>
+</head>
+<body>
+
+<div class="grain"></div>
+
+<nav class="top-nav">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="privacy.html">Privacy</a>
+</nav>
+
+<header>
+  <div class="brand-mark">॥ Online Darshan ॥</div>
+  <h1 class="site-title"><a href="index.html">Daily Darshan</a></h1>
+</header>
+
+<div class="static-page">
+  <h1>Contact Us</h1>
+
+  <p>We'd like to hear from you — whether it's a correction to a verse, a suggestion for a deity or
+  festival we haven't covered yet, a technical issue with the site, or simply a thought you'd like to
+  share.</p>
+
+  <div class="contact-info">
+    <p><strong>Email:</strong> <a href="mailto:hello@REPLACE-WITH-YOUR-DOMAIN.com">hello@REPLACE-WITH-YOUR-DOMAIN.com</a></p>
+    <p><strong>Response time:</strong> We typically reply within 3–5 business days.</p>
+  </div>
+
+  <h2>Corrections &amp; accuracy</h2>
+  <p>If you believe a mantra, translation, or attribution on this site contains an error, please tell us
+  exactly which shrine and which verse is affected — this helps us verify and correct it quickly.</p>
+
+  <h2>Advertising &amp; partnerships</h2>
+  <p>For advertising inquiries, please use the email address above with the subject line "Advertising."</p>
+</div>
+
+<footer>
+  <a href="index.html">Home</a> · <a href="about.html">About</a> · <a href="contact.html">Contact</a> · <a href="privacy.html">Privacy Policy</a>
+</footer>
+
+</body>
+</html>
