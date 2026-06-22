@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Daily Darshan — Online Puja & Blessings for Ganesha, Hanuman, Shiva, Lakshmi & Krishna</title>
-<meta name="description" content="Light a diya, offer prayer, and read daily verses for Ganesha, Hanuman, Shiva, Lakshmi and Krishna — a quiet devotional space for your day.">
-<link rel="canonical" href="https://dailydarshan.online/">
+<title>Ganesha Shrine — Light a Diya Online, Mantras & Meaning | Daily Darshan</title>
+<meta name="description" content="Light a virtual diya for Lord Ganesha, read the Vakratunda Mahakaya shloka and Ganesha Gayatri Mantra with meaning, and learn why he is invoked before every new beginning.">
+<link rel="canonical" href="https://dailydarshan.online/ganesha.html">
 <style>
 :root {
   --deep-maroon: #2b0f12;
@@ -618,87 +618,196 @@ footer a { color: rgba(212,165,68,0.6); text-decoration: none; }
 <div class="grain"></div>
 
 <nav class="top-nav">
+  <a href="index.html">Home</a>
   <a href="about.html">About</a>
   <a href="contact.html">Contact</a>
   <a href="privacy.html">Privacy</a>
 </nav>
 
-<header>
-  <div class="brand-mark">॥ Online Darshan ॥</div>
-  <h1 class="site-title">Daily Darshan</h1>
-  <p class="site-tagline">Light a diya. Offer your prayer. Carry peace with you.</p>
-</header>
+<div class="shrine-backdrop" style="background-image: url('https://cdn.pixabay.com/photo/2023/07/17/21/34/ai-generated-8133606_1280.png');"></div>
 
-<div class="ad-slot leaderboard">AD SLOT — 320×50 MOBILE / 728×90 DESKTOP (e.g. Google AdSense)</div>
+<div class="shrine-inner" style="padding-top: 36px;">
+  <img class="shrine-portrait" src="https://cdn.pixabay.com/photo/2023/07/17/21/34/ai-generated-8133606_1280.png" alt="Lord Ganesha">
+  <div class="shrine-name-script">श्री गणेशाय नमः</div>
+  <div class="shrine-name-en">Ganesha · Vighnaharta</div>
+  <p class="shrine-mantra">"Om Gan Ganpataye Namo Namah"</p>
 
-<p class="intro-copy">
-  Daily Darshan is a quiet space to begin or close your day — five shrines, five traditions of devotion,
-  open whenever you need a moment of stillness. Choose a deity below to light a diya and read today's verse.
-</p>
+  <div class="ad-slot leaderboard" style="margin-top:24px;">AD SLOT — 320×50 MOBILE / 728×90 DESKTOP (e.g. Google AdSense)</div>
 
-<main class="deity-grid">
-
-  <a href="shiva.html" class="deity-card">
-    <img src="https://cdn.pixabay.com/photo/2023/11/26/10/04/lord-shiva-8413252_1280.png" alt="Lord Shiva" loading="lazy">
-    <div class="card-frame"></div>
-    <div class="deity-info">
-      <div class="deity-name-script">शिव</div>
-      <div class="deity-name-en">Lord Shiva</div>
-      <p class="deity-epithet">The auspicious one. Destroyer of illusion, lord of stillness and transformation.</p>
-      <span class="enter-btn">Enter Shrine →</span>
+  <div class="altar" id="altar-ganesha">
+    <div class="altar-label">Your Offering</div>
+    <div class="offering-stage">
+      <div class="offering-glow" id="glow-ganesha"></div>
+      <div class="diya" id="diya-ganesha">🪔</div>
     </div>
-  </a>
+    <div class="tier-badge" id="tier-ganesha">Simple Offering</div>
 
-  <a href="hanuman.html" class="deity-card">
-    <img src="https://cdn.pixabay.com/photo/2024/05/14/15/24/hanuman-8761491_1280.png" alt="Lord Hanuman" loading="lazy">
-    <div class="card-frame"></div>
-    <div class="deity-info">
-      <div class="deity-name-script">हनुमान</div>
-      <div class="deity-name-en">Lord Hanuman</div>
-      <p class="deity-epithet">Devotion, strength, and unwavering courage in service of dharma.</p>
-      <span class="enter-btn">Enter Shrine →</span>
+    <div class="offering-actions">
+      <button class="btn btn-primary" onclick="lightDiya('ganesha')">Light a Diya — Free</button>
     </div>
-  </a>
+    <div class="offering-actions" style="margin-top:10px;">
+      <button class="btn btn-share" onclick="shareTemple('ganesha', 'Ganesha', 'https://dailydarshan.online/ganesha.html')">Share to unlock Marigold Offering</button>
+      <button class="btn btn-secondary" onclick="watchAd('ganesha')">Support with an ad ▸ unlock Full Aarti</button>
+    </div>
+    <p class="unlock-note">
+      Lighting a diya is always free. <strong>Sharing</strong> or <strong>supporting with a short ad</strong>
+      simply makes your offering richer — flowers, incense, and a full aarti flame. Never required, always appreciated. 🙏
+    </p>
+  </div>
 
-  <a href="ganesha.html" class="deity-card">
-    <img src="https://cdn.pixabay.com/photo/2023/07/17/21/34/ai-generated-8133606_1280.png" alt="Lord Ganesha" loading="lazy">
-    <div class="card-frame"></div>
-    <div class="deity-info">
-      <div class="deity-name-script">गणेश</div>
-      <div class="deity-name-en">Lord Ganesha</div>
-      <p class="deity-epithet">Remover of obstacles. Invoked first, before any new beginning.</p>
-      <span class="enter-btn">Enter Shrine →</span>
-    </div>
-  </a>
+  <div class="shrine-about">
+    <div class="label">About Lord Ganesha</div>
+    
+          <p>Ganesha is the elephant-headed son of Shiva and Parvati, and the first deity invoked before
+          any new undertaking — a wedding, a new home, a business, the first page of an account book.
+          He is known as <strong>Vighnaharta</strong>, the remover of obstacles, and also as the one who can
+          place obstacles in the path of those who act without wisdom, a reminder that his blessing is
+          about right beginnings, not merely easy ones.</p>
+          <p>Ganesha's broken tusk, his large ears, and his small mouse companion Mushika are each read by
+          devotees as teachings: to listen more than you speak, to use what breaks you as a tool rather
+          than a wound, and to stay humble no matter how large your form. His festival, Ganesh Chaturthi,
+          is among the most widely celebrated in India, particularly in Maharashtra, where elaborate clay
+          idols are immersed in water at the close of the celebration as a teaching on impermanence.</p>
+        
+  </div>
 
-  <a href="lakshmi.html" class="deity-card">
-    <img src="https://cdn.pixabay.com/photo/2024/08/14/10/15/ai-generated-8968200_1280.jpg" alt="Goddess Lakshmi" loading="lazy">
-    <div class="card-frame"></div>
-    <div class="deity-info">
-      <div class="deity-name-script">लक्ष्मी</div>
-      <div class="deity-name-en">Goddess Lakshmi</div>
-      <p class="deity-epithet">Goddess of wealth, prosperity, and abundance in every form.</p>
-      <span class="enter-btn">Enter Shrine →</span>
-    </div>
-  </a>
+  <div class="daily-strip">
+    <div class="label">Today's Verse</div>
+    <div class="verse" id="verse-ganesha">Loading today's verse…</div>
+    <div class="verse-source" id="source-ganesha"></div>
+  </div>
 
-  <a href="krishna.html" class="deity-card">
-    <img src="https://cdn.pixabay.com/photo/2024/09/30/03/04/ai-generated-9084606_1280.jpg" alt="Lord Krishna" loading="lazy">
-    <div class="card-frame"></div>
-    <div class="deity-info">
-      <div class="deity-name-script">कृष्ण</div>
-      <div class="deity-name-en">Lord Krishna</div>
-      <p class="deity-epithet">Divine teacher and eternal friend. The eighth avatar of Vishnu.</p>
-      <span class="enter-btn">Enter Shrine →</span>
-    </div>
-  </a>
-</main>
+  <div class="ad-slot inline">AD SLOT — 300×250 IN-CONTENT (e.g. Google AdSense)</div>
+
+  <div class="shrine-about" style="text-align:center;">
+    <div class="label">Other Shrines</div>
+    <p style="font-size:13px;"><a href="shiva.html">Lord Shiva</a> · <a href="hanuman.html">Lord Hanuman</a> · <a href="lakshmi.html">Goddess Lakshmi</a> · <a href="krishna.html">Lord Krishna</a></p>
+  </div>
+</div>
+
+<!-- ============ SIMULATED REWARDED AD MODAL ============ -->
+<div class="ad-modal-overlay" id="ad-modal">
+  <div class="ad-modal">
+    <div class="ad-modal-label">Supporting the temple</div>
+    <div class="ad-timer-ring"></div>
+    <p>Loading a short sponsor message…<br>your offering will be enriched in a moment.</p>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
 
 <footer>
   Deity images used under the Pixabay Content License. Daily Darshan is an independent devotional space
   and is not affiliated with any temple trust or religious organisation.<br>
-  <a href="about.html">About</a> · <a href="contact.html">Contact</a> · <a href="privacy.html">Privacy Policy</a>
+  <a href="index.html">Home</a> · <a href="about.html">About</a> · <a href="contact.html">Contact</a> · <a href="privacy.html">Privacy Policy</a>
 </footer>
+
+<script>
+// ==========================================================================
+// DAILY VERSE ROTATION
+// Uses (day-of-year % library.length) so the sequence repeats every year.
+// Every verse has a named, verifiable source (see deity_data.py for the
+// full source list) — nothing here is invented.
+// ==========================================================================
+
+function dayOfYear(date) {
+  const start = new Date(date.getFullYear(), 0, 0);
+  const diff = date - start;
+  return Math.floor(diff / (1000 * 60 * 60 * 24));
+}
+
+function loadDailyVerse(deityKey, verses) {
+  const today = dayOfYear(new Date());
+  const verse = verses[today % verses.length];
+  const textEl = document.getElementById('verse-' + deityKey);
+  const sourceEl = document.getElementById('source-' + deityKey);
+  if (textEl) textEl.textContent = '"' + verse.text + '"';
+  if (sourceEl) sourceEl.textContent = '— ' + verse.source;
+}
+
+// ---------- State (in-memory only, no localStorage per platform rules) ----------
+const offeringState = {};
+
+const TIERS = [
+  { name: 'Simple Offering', icon: '🪔' },
+  { name: 'Marigold Offering', icon: '🪔🌼' },
+  { name: 'Full Aarti', icon: '🪔🌼🔥' }
+];
+
+function initOffering(deityKey) {
+  offeringState[deityKey] = { tier: 0, count: 0 };
+}
+
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(t._timer);
+  t._timer = setTimeout(() => t.classList.remove('show'), 2600);
+}
+
+function renderTier(deity) {
+  const tierInfo = TIERS[offeringState[deity].tier];
+  document.getElementById('tier-' + deity).textContent = tierInfo.name;
+  document.getElementById('diya-' + deity).textContent = tierInfo.icon;
+}
+
+function lightDiya(deity) {
+  offeringState[deity].count++;
+  const diya = document.getElementById('diya-' + deity);
+  diya.style.transform = 'scale(1.3)';
+  setTimeout(() => diya.style.transform = '', 250);
+  const count = offeringState[deity].count;
+  showToast('🙏 Your diya has been lit. ' + count + ' offering' + (count > 1 ? 's' : '') + ' so far today.');
+}
+
+function shareTemple(deity, deityName, pageUrl) {
+  const shareData = {
+    title: 'Daily Darshan',
+    text: 'I lit a diya for Lord ' + deityName + ' today on Daily Darshan 🪔 — light one for someone you love.',
+    url: pageUrl
+  };
+  if (navigator.share) {
+    navigator.share(shareData).then(() => unlockTier(deity, 1)).catch(() => {});
+  } else {
+    navigator.clipboard?.writeText(shareData.url);
+    showToast('Link copied! Share it to unlock a richer offering.');
+    unlockTier(deity, 1);
+  }
+}
+
+function watchAd(deity) {
+  const modal = document.getElementById('ad-modal');
+  modal.classList.add('active');
+  setTimeout(() => {
+    modal.classList.remove('active');
+    unlockTier(deity, 2);
+    showToast('🌼 Thank you for supporting the temple. Offering enriched!');
+  }, 2200);
+}
+
+function unlockTier(deity, minTier) {
+  if (offeringState[deity].tier < minTier) {
+    offeringState[deity].tier = minTier;
+    renderTier(deity);
+  }
+}
+
+
+  initOffering('ganesha');
+  loadDailyVerse('ganesha', [
+      { text: 'Vakratunda Mahakaya, Suryakoti Samaprabha — O Lord of the curved trunk and mighty form, radiant as a million suns, remove every obstacle from this work, always.', source: 'Vakratunda Mahakaya Shloka' },
+      { text: 'Ekadantaya Vidmahe, Vakratundaya Dhimahi, Tanno Danti Prachodayat — We meditate on the single-tusked Lord with the curved trunk; may that mighty one inspire and guide us.', source: 'Ganesha Gayatri Mantra' },
+      { text: 'Suklambaradharam Vishnum, Shashivarnam Chaturbhujam, Prasannavadanam Dhyayet, Sarvavighnopashantaye — We meditate on the Lord clad in white, moon-bright, four-armed and serene-faced, for the calming of all obstacles.', source: 'Dhyana Shloka, recited before any auspicious task' },
+      { text: "Agajanana Padmarkam, Gajananam Aharnisham, Anekadantam Bhaktanam, Ekadantam Upasmahe — Day and night we worship the elephant-faced one, who is the sun to Mother Parvati's lotus face, granter of many boons.", source: 'Ganesha Pancharatna, verse 1' },
+      { text: 'Om Gajananaya Namah — Salutations to the one with the elephant face, who teaches us to set aside ego and live dutifully.', source: 'Ganesha Ashtottara Shatanamavali (108 names)' },
+      { text: 'Om Vighnarajaya Namah — Salutations to the King of obstacles, who governs what stands in our way so that it may be cleared.', source: 'Ganesha Ashtottara Shatanamavali (108 names)' },
+      { text: 'Om Ganadhyakshaya Namah — Salutations to the leader of the celestial hosts, invoked for the wellbeing of communities and for steady leadership within ourselves.', source: 'Ganesha Ashtottara Shatanamavali (108 names)' },
+      { text: 'Whoever recites these twelve names of Ganesha three times a day will have every obstacle and fear removed, and will attain success — a promise sage Narada is said to have offered to the Lord.', source: 'Dvadasha Nama Stotra (Twelve Names of Ganesha)' },
+      { text: 'Om Shreem Gam Saubhagya Ganapataye Varavarada Sarvajanam Me Vashamanaya Swaha — We ask Lord Ganesha for good fortune in this life and the next, bowing to the one who blesses long life, health, and happiness.', source: 'Ganesh Shubh Labh Mantra' },
+      { text: 'Om Namo Siddhi Vinayakaya — O Lord of Wisdom and Happiness, you alone make every endeavour possible; remover of all obstacles, lord of all beings.', source: 'Siddhi Vinayak Mantra' }
+    ]);
+</script>
 
 </body>
 </html>

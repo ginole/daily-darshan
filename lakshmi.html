@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Daily Darshan — Online Puja & Blessings for Ganesha, Hanuman, Shiva, Lakshmi & Krishna</title>
-<meta name="description" content="Light a diya, offer prayer, and read daily verses for Ganesha, Hanuman, Shiva, Lakshmi and Krishna — a quiet devotional space for your day.">
-<link rel="canonical" href="https://dailydarshan.online/">
+<title>Lakshmi Shrine — Mahalakshmi Mantras & Online Diya | Daily Darshan</title>
+<meta name="description" content="Light a virtual diya for Goddess Lakshmi, read the Mahalakshmi Ashtakam and Lakshmi Gayatri Mantra with meaning, and learn why lamps are lit for her each evening.">
+<link rel="canonical" href="https://dailydarshan.online/lakshmi.html">
 <style>
 :root {
   --deep-maroon: #2b0f12;
@@ -618,87 +618,191 @@ footer a { color: rgba(212,165,68,0.6); text-decoration: none; }
 <div class="grain"></div>
 
 <nav class="top-nav">
+  <a href="index.html">Home</a>
   <a href="about.html">About</a>
   <a href="contact.html">Contact</a>
   <a href="privacy.html">Privacy</a>
 </nav>
 
-<header>
-  <div class="brand-mark">॥ Online Darshan ॥</div>
-  <h1 class="site-title">Daily Darshan</h1>
-  <p class="site-tagline">Light a diya. Offer your prayer. Carry peace with you.</p>
-</header>
+<div class="shrine-backdrop" style="background-image: url('https://cdn.pixabay.com/photo/2024/08/14/10/15/ai-generated-8968200_1280.jpg');"></div>
 
-<div class="ad-slot leaderboard">AD SLOT — 320×50 MOBILE / 728×90 DESKTOP (e.g. Google AdSense)</div>
+<div class="shrine-inner" style="padding-top: 36px;">
+  <img class="shrine-portrait" src="https://cdn.pixabay.com/photo/2024/08/14/10/15/ai-generated-8968200_1280.jpg" alt="Goddess Lakshmi">
+  <div class="shrine-name-script">श्री महालक्ष्म्यै नमः</div>
+  <div class="shrine-name-en">Lakshmi · Mahalakshmi</div>
+  <p class="shrine-mantra">"Om Shreem Mahalakshmiyei Namaha"</p>
 
-<p class="intro-copy">
-  Daily Darshan is a quiet space to begin or close your day — five shrines, five traditions of devotion,
-  open whenever you need a moment of stillness. Choose a deity below to light a diya and read today's verse.
-</p>
+  <div class="ad-slot leaderboard" style="margin-top:24px;">AD SLOT — 320×50 MOBILE / 728×90 DESKTOP (e.g. Google AdSense)</div>
 
-<main class="deity-grid">
-
-  <a href="shiva.html" class="deity-card">
-    <img src="https://cdn.pixabay.com/photo/2023/11/26/10/04/lord-shiva-8413252_1280.png" alt="Lord Shiva" loading="lazy">
-    <div class="card-frame"></div>
-    <div class="deity-info">
-      <div class="deity-name-script">शिव</div>
-      <div class="deity-name-en">Lord Shiva</div>
-      <p class="deity-epithet">The auspicious one. Destroyer of illusion, lord of stillness and transformation.</p>
-      <span class="enter-btn">Enter Shrine →</span>
+  <div class="altar" id="altar-lakshmi">
+    <div class="altar-label">Your Offering</div>
+    <div class="offering-stage">
+      <div class="offering-glow" id="glow-lakshmi"></div>
+      <div class="diya" id="diya-lakshmi">🪔</div>
     </div>
-  </a>
+    <div class="tier-badge" id="tier-lakshmi">Simple Offering</div>
 
-  <a href="hanuman.html" class="deity-card">
-    <img src="https://cdn.pixabay.com/photo/2024/05/14/15/24/hanuman-8761491_1280.png" alt="Lord Hanuman" loading="lazy">
-    <div class="card-frame"></div>
-    <div class="deity-info">
-      <div class="deity-name-script">हनुमान</div>
-      <div class="deity-name-en">Lord Hanuman</div>
-      <p class="deity-epithet">Devotion, strength, and unwavering courage in service of dharma.</p>
-      <span class="enter-btn">Enter Shrine →</span>
+    <div class="offering-actions">
+      <button class="btn btn-primary" onclick="lightDiya('lakshmi')">Light a Diya — Free</button>
     </div>
-  </a>
+    <div class="offering-actions" style="margin-top:10px;">
+      <button class="btn btn-share" onclick="shareTemple('lakshmi', 'Lakshmi', 'https://dailydarshan.online/lakshmi.html')">Share to unlock Marigold Offering</button>
+      <button class="btn btn-secondary" onclick="watchAd('lakshmi')">Support with an ad ▸ unlock Full Aarti</button>
+    </div>
+    <p class="unlock-note">
+      Lighting a diya is always free. <strong>Sharing</strong> or <strong>supporting with a short ad</strong>
+      simply makes your offering richer — flowers, incense, and a full aarti flame. Never required, always appreciated. 🙏
+    </p>
+  </div>
 
-  <a href="ganesha.html" class="deity-card">
-    <img src="https://cdn.pixabay.com/photo/2023/07/17/21/34/ai-generated-8133606_1280.png" alt="Lord Ganesha" loading="lazy">
-    <div class="card-frame"></div>
-    <div class="deity-info">
-      <div class="deity-name-script">गणेश</div>
-      <div class="deity-name-en">Lord Ganesha</div>
-      <p class="deity-epithet">Remover of obstacles. Invoked first, before any new beginning.</p>
-      <span class="enter-btn">Enter Shrine →</span>
-    </div>
-  </a>
+  <div class="shrine-about">
+    <div class="label">About Goddess Lakshmi</div>
+    
+          <p>Lakshmi is the goddess of wealth, fortune, and prosperity — understood not only as material
+          abundance but as wellbeing in every form: health, happiness, generosity, and grace. She is the
+          consort of Lord Vishnu, traditionally depicted seated on a blooming lotus, with gold coins
+          flowing from her open palms.</p>
+          <p>Devotees light lamps for Lakshmi each evening, particularly at dusk, when she is said to enter
+          homes that are clean, welcoming, and lit. Her presence is most widely celebrated during Diwali,
+          the festival of lights, when entire households are cleaned and illuminated in her honour. She is
+          known by many forms — Dhana Lakshmi (wealth), Dhanya Lakshmi (grain and nourishment), Santana
+          Lakshmi (family) — together called the Ashta Lakshmi, the eight forms of abundance.</p>
+        
+  </div>
 
-  <a href="lakshmi.html" class="deity-card">
-    <img src="https://cdn.pixabay.com/photo/2024/08/14/10/15/ai-generated-8968200_1280.jpg" alt="Goddess Lakshmi" loading="lazy">
-    <div class="card-frame"></div>
-    <div class="deity-info">
-      <div class="deity-name-script">लक्ष्मी</div>
-      <div class="deity-name-en">Goddess Lakshmi</div>
-      <p class="deity-epithet">Goddess of wealth, prosperity, and abundance in every form.</p>
-      <span class="enter-btn">Enter Shrine →</span>
-    </div>
-  </a>
+  <div class="daily-strip">
+    <div class="label">Today's Verse</div>
+    <div class="verse" id="verse-lakshmi">Loading today's verse…</div>
+    <div class="verse-source" id="source-lakshmi"></div>
+  </div>
 
-  <a href="krishna.html" class="deity-card">
-    <img src="https://cdn.pixabay.com/photo/2024/09/30/03/04/ai-generated-9084606_1280.jpg" alt="Lord Krishna" loading="lazy">
-    <div class="card-frame"></div>
-    <div class="deity-info">
-      <div class="deity-name-script">कृष्ण</div>
-      <div class="deity-name-en">Lord Krishna</div>
-      <p class="deity-epithet">Divine teacher and eternal friend. The eighth avatar of Vishnu.</p>
-      <span class="enter-btn">Enter Shrine →</span>
-    </div>
-  </a>
-</main>
+  <div class="ad-slot inline">AD SLOT — 300×250 IN-CONTENT (e.g. Google AdSense)</div>
+
+  <div class="shrine-about" style="text-align:center;">
+    <div class="label">Other Shrines</div>
+    <p style="font-size:13px;"><a href="shiva.html">Lord Shiva</a> · <a href="hanuman.html">Lord Hanuman</a> · <a href="ganesha.html">Lord Ganesha</a> · <a href="krishna.html">Lord Krishna</a></p>
+  </div>
+</div>
+
+<!-- ============ SIMULATED REWARDED AD MODAL ============ -->
+<div class="ad-modal-overlay" id="ad-modal">
+  <div class="ad-modal">
+    <div class="ad-modal-label">Supporting the temple</div>
+    <div class="ad-timer-ring"></div>
+    <p>Loading a short sponsor message…<br>your offering will be enriched in a moment.</p>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
 
 <footer>
   Deity images used under the Pixabay Content License. Daily Darshan is an independent devotional space
   and is not affiliated with any temple trust or religious organisation.<br>
-  <a href="about.html">About</a> · <a href="contact.html">Contact</a> · <a href="privacy.html">Privacy Policy</a>
+  <a href="index.html">Home</a> · <a href="about.html">About</a> · <a href="contact.html">Contact</a> · <a href="privacy.html">Privacy Policy</a>
 </footer>
+
+<script>
+// ==========================================================================
+// DAILY VERSE ROTATION
+// Uses (day-of-year % library.length) so the sequence repeats every year.
+// Every verse has a named, verifiable source (see deity_data.py for the
+// full source list) — nothing here is invented.
+// ==========================================================================
+
+function dayOfYear(date) {
+  const start = new Date(date.getFullYear(), 0, 0);
+  const diff = date - start;
+  return Math.floor(diff / (1000 * 60 * 60 * 24));
+}
+
+function loadDailyVerse(deityKey, verses) {
+  const today = dayOfYear(new Date());
+  const verse = verses[today % verses.length];
+  const textEl = document.getElementById('verse-' + deityKey);
+  const sourceEl = document.getElementById('source-' + deityKey);
+  if (textEl) textEl.textContent = '"' + verse.text + '"';
+  if (sourceEl) sourceEl.textContent = '— ' + verse.source;
+}
+
+// ---------- State (in-memory only, no localStorage per platform rules) ----------
+const offeringState = {};
+
+const TIERS = [
+  { name: 'Simple Offering', icon: '🪔' },
+  { name: 'Marigold Offering', icon: '🪔🌼' },
+  { name: 'Full Aarti', icon: '🪔🌼🔥' }
+];
+
+function initOffering(deityKey) {
+  offeringState[deityKey] = { tier: 0, count: 0 };
+}
+
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(t._timer);
+  t._timer = setTimeout(() => t.classList.remove('show'), 2600);
+}
+
+function renderTier(deity) {
+  const tierInfo = TIERS[offeringState[deity].tier];
+  document.getElementById('tier-' + deity).textContent = tierInfo.name;
+  document.getElementById('diya-' + deity).textContent = tierInfo.icon;
+}
+
+function lightDiya(deity) {
+  offeringState[deity].count++;
+  const diya = document.getElementById('diya-' + deity);
+  diya.style.transform = 'scale(1.3)';
+  setTimeout(() => diya.style.transform = '', 250);
+  const count = offeringState[deity].count;
+  showToast('🙏 Your diya has been lit. ' + count + ' offering' + (count > 1 ? 's' : '') + ' so far today.');
+}
+
+function shareTemple(deity, deityName, pageUrl) {
+  const shareData = {
+    title: 'Daily Darshan',
+    text: 'I lit a diya for Lord ' + deityName + ' today on Daily Darshan 🪔 — light one for someone you love.',
+    url: pageUrl
+  };
+  if (navigator.share) {
+    navigator.share(shareData).then(() => unlockTier(deity, 1)).catch(() => {});
+  } else {
+    navigator.clipboard?.writeText(shareData.url);
+    showToast('Link copied! Share it to unlock a richer offering.');
+    unlockTier(deity, 1);
+  }
+}
+
+function watchAd(deity) {
+  const modal = document.getElementById('ad-modal');
+  modal.classList.add('active');
+  setTimeout(() => {
+    modal.classList.remove('active');
+    unlockTier(deity, 2);
+    showToast('🌼 Thank you for supporting the temple. Offering enriched!');
+  }, 2200);
+}
+
+function unlockTier(deity, minTier) {
+  if (offeringState[deity].tier < minTier) {
+    offeringState[deity].tier = minTier;
+    renderTier(deity);
+  }
+}
+
+
+  initOffering('lakshmi');
+  loadDailyVerse('lakshmi', [
+      { text: 'Om Shreem Mahalakshmiyei Namaha — My salutations to the great Lakshmi, goddess of abundance, wealth, and beauty.', source: 'Mahalakshmi Namaha Mantra' },
+      { text: 'Om Shree Mahalakshmyai Cha Vidmahe, Vishnu Patnyai Cha Dheemahi, Tanno Lakshmi Prachodayat — We meditate on the great Goddess, consort of Vishnu; may Lakshmi illuminate our understanding.', source: 'Lakshmi Gayatri Mantra' },
+      { text: 'Om Hreem Shreem Lakshmibhyo Namah — Om, and salutations to the Goddess of wealth and prosperity, combining the seed sounds of divine power and abundance.', source: 'Lakshmi Beej (Seed) Mantra' },
+      { text: 'Namastestu Mahamaye, Shreepeethe Surapoojite, Shankha-Chakra-Gadaa-Haste, Mahalakshmi Namostute — Salutations to you, great Mahamaya, seated in glory and worshipped by the gods, who holds the conch, the discus, and the mace; salutations to Mahalakshmi.', source: 'Sri Mahalakshmi Ashtakam, Verse 1' },
+      { text: "Om Sarvabaadhaa Vinirmukto, Dhan Dhaanyah Sutaanvitah, Manushyo Matprasaaden Bhavishyati Na Sanshayah — Through the Goddess's grace, may one be freed of all obstacles and blessed without doubt with wealth, grain, and good family.", source: 'Mahalakshmi Mantra, recited especially on Diwali night' },
+      { text: 'Goddess of health and happiness, of divinity, detachment, and enlightenment — Mahalakshmi bestows whatever is sought at every stage of life, not wealth alone.', source: 'Traditional teaching on the nature of Mahalakshmi' }
+    ]);
+</script>
 
 </body>
 </html>
