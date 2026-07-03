@@ -4,636 +4,85 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ganesha Shrine — Light a Diya Online, Mantras & Meaning | Daily Darshan</title>
-<meta name="description" content="Light a virtual diya for Lord Ganesha, read the Vakratunda Mahakaya shloka and Ganesha Gayatri Mantra with meaning, and learn why he is invoked before every new beginning.">
+<meta name="description" content="Invoke Lord Ganesha before any new beginning. Light a virtual diya, chant Ganesha mantras, and learn the meaning behind the elephant-headed remover of obstacles.">
 <link rel="canonical" href="https://dailydarshan.online/ganesha.html">
 <style>
-:root {
-  --deep-maroon: #2b0f12;
-  --temple-red: #6b1622;
-  --marigold: #e8a13d;
-  --gold: #d4a544;
-  --gold-bright: #f4c95d;
-  --cream: #f3e7d3;
-  --smoke: #1a0a0c;
-  --sandalwood: #c98a4b;
-  --font-display: 'Tiro Devanagari Hindi', Georgia, serif;
-  --font-body: 'Mukta', 'Segoe UI', sans-serif;
-}
-
+:root { --deep-maroon: #2b0f12; --temple-red: #6b1622; --marigold: #e8a13d; --gold: #d4a544; --gold-bright: #f4c95d; --cream: #f3e7d3; --smoke: #1a0a0c; --font-display: 'Tiro Devanagari Hindi', Georgia, serif; --font-body: 'Mukta', 'Segoe UI', sans-serif; }
 @import url('https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&family=Mukta:wght@300;400;500;600;700&family=Cinzel:wght@500;700&display=swap');
-
 * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
-
 html { -webkit-text-size-adjust: 100%; }
-
-body {
-  background: var(--smoke);
-  background-image:
-    radial-gradient(ellipse at top, rgba(107,22,34,0.4) 0%, transparent 60%),
-    radial-gradient(ellipse at bottom, rgba(43,15,18,0.6) 0%, transparent 60%);
-  color: var(--cream);
-  font-family: var(--font-body);
-  min-height: 100vh;
-  overflow-x: hidden;
-}
-
-.grain {
-  position: fixed; inset: 0; pointer-events: none; z-index: 1;
-  opacity: 0.04;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-}
-
-/* ---------- Top utility nav ---------- */
-.top-nav {
-  position: relative; z-index: 5;
-  display: flex; justify-content: center; gap: 18px;
-  padding: 14px 16px 0;
-  font-size: 11.5px;
-  letter-spacing: 0.05em;
-}
-.top-nav a {
-  color: rgba(243,231,211,0.55);
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  padding-bottom: 2px;
-}
+body { background: var(--smoke); background-image: radial-gradient(ellipse at top, rgba(107,22,34,0.4) 0%, transparent 60%), radial-gradient(ellipse at bottom, rgba(43,15,18,0.6) 0%, transparent 60%); color: var(--cream); font-family: var(--font-body); min-height: 100vh; overflow-x: hidden; }
+.grain { position: fixed; inset: 0; pointer-events: none; z-index: 1; opacity: 0.04; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+.top-nav { position: relative; z-index: 5; display: flex; justify-content: center; gap: 18px; padding: 14px 16px 0; font-size: 11.5px; letter-spacing: 0.05em; }
+.top-nav a { color: rgba(243,231,211,0.55); text-decoration: none; border-bottom: 1px solid transparent; padding-bottom: 2px; }
 .top-nav a:hover { color: var(--gold-bright); border-color: var(--gold-bright); }
-
-/* ---------- Header ---------- */
-header {
-  position: relative;
-  z-index: 5;
-  text-align: center;
-  padding: 28px 20px 24px;
-}
-
-.brand-mark {
-  font-family: var(--font-display);
-  font-size: 15px;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--marigold);
-  opacity: 0.85;
-}
-
-h1.site-title {
-  font-family: 'Cinzel', serif;
-  font-size: clamp(26px, 8vw, 44px);
-  font-weight: 700;
-  color: var(--gold-bright);
-  text-shadow: 0 0 24px rgba(244,201,93,0.35);
-  margin-top: 6px;
-  letter-spacing: 0.02em;
-}
-
-.site-title a { color: inherit; text-decoration: none; }
-
-.site-tagline {
-  margin-top: 8px;
-  font-size: 14px;
-  color: rgba(243,231,211,0.65);
-  font-style: italic;
-}
-
-/* ---------- Ad slot ---------- */
-.ad-slot {
-  position: relative;
-  z-index: 5;
-  max-width: 320px;
-  margin: 0 auto 24px;
-  padding: 8px;
-  border: 1px dashed rgba(212,165,68,0.3);
-  border-radius: 6px;
-  text-align: center;
-  font-size: 10px;
-  line-height: 1.4;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: rgba(212,165,68,0.45);
-  background: rgba(0,0,0,0.15);
-}
+.ad-slot { position: relative; z-index: 5; max-width: 320px; margin: 0 auto 24px; padding: 8px; border: 1px dashed rgba(212,165,68,0.3); border-radius: 6px; text-align: center; font-size: 10px; line-height: 1.4; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(212,165,68,0.45); background: rgba(0,0,0,0.15); }
 .ad-slot.leaderboard { min-height: 50px; display: flex; align-items: center; justify-content: center; }
-
-@media (min-width: 768px) {
-  .ad-slot { max-width: 728px; font-size: 11px; padding: 10px; }
-  .ad-slot.leaderboard { min-height: 90px; }
-}
-
-/* ---------- Deity grid ---------- */
-.deity-grid {
-  position: relative;
-  z-index: 5;
-  max-width: 1080px;
-  margin: 0 auto;
-  padding: 0 16px 48px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-@media (min-width: 700px) {
-  .deity-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 24px;
-    padding: 0 20px 60px;
-  }
-}
-
-.deity-card {
-  background: linear-gradient(165deg, rgba(107,22,34,0.55), rgba(26,10,12,0.85));
-  border: 1px solid rgba(212,165,68,0.25);
-  border-radius: 4px;
-  overflow: hidden;
-  position: relative;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  cursor: pointer;
-  display: block;
-  text-decoration: none;
-  color: inherit;
-}
-.deity-card::before {
-  content: '';
-  position: absolute; inset: 0;
-  background: linear-gradient(180deg, transparent 60%, rgba(0,0,0,0.5) 100%);
-  z-index: 2; pointer-events: none;
-}
-.deity-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 50px rgba(212,165,68,0.15);
-  border-color: rgba(244,201,93,0.5);
-}
-
-.deity-card img {
-  width: 100%;
-  height: 240px;
-  object-fit: cover;
-  object-position: top center;
-  display: block;
-  filter: saturate(1.05) contrast(1.05);
-}
-
-@media (min-width: 700px) {
-  .deity-card img { height: 280px; }
-}
-
-.deity-card .card-frame {
-  position: absolute; inset: 8px;
-  border: 1px solid rgba(244,201,93,0.35);
-  pointer-events: none; z-index: 3;
-}
-
-.deity-info {
-  position: relative; z-index: 3;
-  padding: 18px 20px 24px;
-}
-
-.deity-name-script {
-  font-family: var(--font-display);
-  font-size: 22px;
-  color: var(--gold-bright);
-}
-
-.deity-name-en {
-  font-size: 12px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: rgba(243,231,211,0.6);
-  margin-top: 2px;
-}
-
-.deity-epithet {
-  margin-top: 10px;
-  font-size: 13.5px;
-  line-height: 1.5;
-  color: rgba(243,231,211,0.8);
-}
-
-.enter-btn {
-  margin-top: 14px;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 12.5px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--gold-bright);
-  border-bottom: 1px solid var(--gold-bright);
-  padding-bottom: 2px;
-}
-
-/* ---------- Intro copy block on homepage ---------- */
-.intro-copy {
-  position: relative; z-index: 5;
-  max-width: 720px;
-  margin: 0 auto 36px;
-  padding: 0 20px;
-  font-size: 14px;
-  line-height: 1.75;
-  color: rgba(243,231,211,0.7);
-  text-align: center;
-}
-
-/* ---------- Shrine view ---------- */
-.shrine-view {
-  display: none;
-  position: fixed;
-  inset: 0;
-  z-index: 50;
-  background: var(--smoke);
-  overflow-y: auto;
-}
-.shrine-view.active { display: block; }
-
-.shrine-backdrop {
-  position: fixed; inset: 0; z-index: -1;
-  background-size: cover;
-  background-position: center 20%;
-  filter: blur(2px) brightness(0.35) saturate(1.1);
-  transform: scale(1.05);
-}
-
-.shrine-close {
-  position: fixed;
-  top: 14px; right: 14px;
-  z-index: 60;
-  background: rgba(0,0,0,0.55);
-  border: 1px solid rgba(244,201,93,0.4);
-  color: var(--gold-bright);
-  width: 44px; height: 44px;
-  border-radius: 50%;
-  font-size: 18px;
-  cursor: pointer;
-  display: flex; align-items: center; justify-content: center;
-}
-
-.shrine-inner {
-  position: relative;
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 64px 18px 60px;
-  text-align: center;
-}
-
-@media (min-width: 700px) {
-  .shrine-inner { padding: 70px 24px 80px; }
-}
-
-.shrine-portrait {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin: 0 auto 16px;
-  border: 3px solid var(--gold);
-  box-shadow: 0 0 0 6px rgba(212,165,68,0.12), 0 16px 44px rgba(0,0,0,0.6);
-}
-
-@media (min-width: 700px) {
-  .shrine-portrait {
-    width: 220px; height: 220px;
-    margin-bottom: 18px;
-    box-shadow: 0 0 0 8px rgba(212,165,68,0.12), 0 20px 60px rgba(0,0,0,0.6);
-  }
-}
-
-.shrine-name-script {
-  font-family: var(--font-display);
-  font-size: 32px;
-  color: var(--gold-bright);
-}
-.shrine-name-en {
-  font-size: 13px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: rgba(243,231,211,0.6);
-  margin-top: 4px;
-}
-
-.shrine-mantra {
-  margin-top: 18px;
-  font-family: var(--font-display);
-  font-style: italic;
-  font-size: 17px;
-  color: var(--marigold);
-  line-height: 1.8;
-}
-
-.shrine-desc {
-  margin-top: 16px;
-  font-size: 14px;
-  line-height: 1.7;
-  color: rgba(243,231,211,0.75);
-  max-width: 480px;
-  margin-left: auto; margin-right: auto;
-  text-align: left;
-}
-.shrine-desc p { margin-bottom: 12px; }
-.shrine-desc strong { color: var(--marigold); }
-
-/* ---------- Offering altar ---------- */
-.altar {
-  margin-top: 40px;
-  background: rgba(0,0,0,0.35);
-  border: 1px solid rgba(212,165,68,0.25);
-  border-radius: 8px;
-  padding: 28px 20px;
-}
-
-.altar-label {
-  font-size: 11.5px;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: rgba(212,165,68,0.6);
-  margin-bottom: 18px;
-}
-
-.offering-stage {
-  position: relative;
-  height: 160px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 18px;
-}
-
-.diya {
-  font-size: 64px;
-  filter: drop-shadow(0 0 18px rgba(244,201,93,0.4));
-  animation: flicker 2.2s ease-in-out infinite;
-  transition: transform 0.3s ease, filter 0.3s ease;
-}
-@keyframes flicker {
-  0%, 100% { transform: scale(1) rotate(-1deg); filter: drop-shadow(0 0 18px rgba(244,201,93,0.4)); }
-  50% { transform: scale(1.04) rotate(1deg); filter: drop-shadow(0 0 28px rgba(244,201,93,0.6)); }
-}
-
-.offering-glow {
-  position: absolute;
-  width: 200px; height: 200px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(244,201,93,0.25), transparent 70%);
-  pointer-events: none;
-  animation: pulse-glow 3s ease-in-out infinite;
-}
-@keyframes pulse-glow {
-  0%, 100% { opacity: 0.5; transform: scale(1); }
-  50% { opacity: 0.9; transform: scale(1.15); }
-}
-
-.tier-badge {
-  display: inline-block;
-  margin-top: 6px;
-  font-size: 11px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  padding: 4px 12px;
-  border-radius: 20px;
-  border: 1px solid rgba(212,165,68,0.4);
-  color: var(--gold-bright);
-  background: rgba(212,165,68,0.08);
-}
-
-.offering-actions {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  justify-content: center;
-  margin-top: 8px;
-}
-
-@media (min-width: 600px) {
-  .offering-actions { flex-direction: row; flex-wrap: wrap; }
-}
-
-.btn {
-  font-family: var(--font-body);
-  font-size: 14.5px;
-  font-weight: 600;
-  padding: 14px 22px;
-  min-height: 48px;
-  border-radius: 30px;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  width: 100%;
-}
-@media (min-width: 600px) {
-  .btn { width: auto; font-size: 13.5px; }
-}
-.btn:hover { transform: translateY(-2px); }
-.btn:active { transform: scale(0.97); }
-
-.btn-primary {
-  background: linear-gradient(135deg, var(--gold-bright), var(--marigold));
-  color: var(--smoke);
-  box-shadow: 0 8px 24px rgba(212,165,68,0.3);
-}
-.btn-secondary {
-  background: rgba(255,255,255,0.06);
-  color: var(--cream);
-  border: 1px solid rgba(243,231,211,0.25);
-}
-.btn-share {
-  background: rgba(107,22,34,0.4);
-  color: var(--gold-bright);
-  border: 1px solid rgba(212,165,68,0.4);
-}
-.btn:disabled { opacity: 0.4; cursor: not-allowed; transform: none; }
-
-.unlock-note {
-  margin-top: 14px;
-  font-size: 12px;
-  color: rgba(243,231,211,0.5);
-  line-height: 1.6;
-}
+@media (min-width: 768px) { .ad-slot { max-width: 728px; font-size: 11px; padding: 10px; } .ad-slot.leaderboard { min-height: 90px; } }
+.shrine-backdrop { position: fixed; inset: 0; z-index: -1; background-size: cover; background-position: center 20%; filter: blur(2px) brightness(0.35) saturate(1.1); transform: scale(1.05); }
+.shrine-inner { position: relative; max-width: 720px; margin: 0 auto; padding: 64px 18px 60px; text-align: center; z-index: 5; }
+@media (min-width: 700px) { .shrine-inner { padding: 70px 24px 80px; } }
+.shrine-portrait { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin: 0 auto 16px; border: 3px solid var(--gold); box-shadow: 0 0 0 6px rgba(212,165,68,0.12), 0 16px 44px rgba(0,0,0,0.6); }
+@media (min-width: 700px) { .shrine-portrait { width: 220px; height: 220px; margin-bottom: 18px; } }
+.shrine-name-script { font-family: var(--font-display); font-size: 32px; color: var(--gold-bright); }
+.shrine-name-en { font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(243,231,211,0.6); margin-top: 4px; }
+.shrine-mantra { margin-top: 18px; font-family: var(--font-display); font-style: italic; font-size: 17px; color: var(--marigold); line-height: 1.8; }
+.altar { margin-top: 40px; background: rgba(0,0,0,0.35); border: 1px solid rgba(212,165,68,0.25); border-radius: 8px; padding: 28px 20px; }
+.altar-label { font-size: 11.5px; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(212,165,68,0.6); margin-bottom: 18px; }
+.offering-stage { position: relative; height: 160px; display: flex; align-items: center; justify-content: center; margin-bottom: 18px; }
+.diya { font-size: 64px; filter: drop-shadow(0 0 18px rgba(244,201,93,0.4)); animation: flicker 2.2s ease-in-out infinite; }
+@keyframes flicker { 0%, 100% { transform: scale(1) rotate(-1deg); filter: drop-shadow(0 0 18px rgba(244,201,93,0.4)); } 50% { transform: scale(1.04) rotate(1deg); filter: drop-shadow(0 0 28px rgba(244,201,93,0.6)); } }
+.offering-glow { position: absolute; width: 200px; height: 200px; border-radius: 50%; background: radial-gradient(circle, rgba(244,201,93,0.25), transparent 70%); pointer-events: none; animation: pulse-glow 3s ease-in-out infinite; }
+@keyframes pulse-glow { 0%, 100% { opacity: 0.5; transform: scale(1); } 50% { opacity: 0.9; transform: scale(1.15); } }
+.tier-badge { display: inline-block; margin-top: 6px; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; border: 1px solid rgba(212,165,68,0.4); color: var(--gold-bright); background: rgba(212,165,68,0.08); }
+.offering-actions { display: flex; flex-direction: column; gap: 10px; justify-content: center; margin-top: 8px; }
+@media (min-width: 600px) { .offering-actions { flex-direction: row; flex-wrap: wrap; } }
+.btn { font-family: var(--font-body); font-size: 14.5px; font-weight: 600; padding: 14px 22px; min-height: 48px; border-radius: 30px; border: none; cursor: pointer; transition: transform 0.2s ease; display: inline-flex; align-items: center; justify-content: center; gap: 8px; width: 100%; }
+@media (min-width: 600px) { .btn { width: auto; font-size: 13.5px; } }
+.btn:hover { transform: translateY(-2px); } .btn:active { transform: scale(0.97); }
+.btn-primary { background: linear-gradient(135deg, var(--gold-bright), var(--marigold)); color: var(--smoke); box-shadow: 0 8px 24px rgba(212,165,68,0.3); }
+.btn-secondary { background: rgba(255,255,255,0.06); color: var(--cream); border: 1px solid rgba(243,231,211,0.25); }
+.btn-share { background: rgba(107,22,34,0.4); color: var(--gold-bright); border: 1px solid rgba(212,165,68,0.4); }
+.unlock-note { margin-top: 14px; font-size: 12px; color: rgba(243,231,211,0.5); line-height: 1.6; }
 .unlock-note strong { color: var(--marigold); }
-
-/* ---------- About section (within shrine: deity story) ---------- */
-.shrine-about {
-  margin-top: 36px;
-  text-align: left;
-  padding-top: 24px;
-  border-top: 1px solid rgba(212,165,68,0.15);
-}
-.shrine-about .label {
-  font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
-  color: rgba(212,165,68,0.6); margin-bottom: 12px;
-}
-.shrine-about p {
-  font-size: 14px; line-height: 1.75; color: rgba(243,231,211,0.78);
-  margin-bottom: 12px;
-}
+.shrine-about { margin-top: 36px; text-align: left; padding-top: 24px; border-top: 1px solid rgba(212,165,68,0.15); }
+.shrine-about .label { font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(212,165,68,0.6); margin-bottom: 12px; }
+.shrine-about p { font-size: 14px; line-height: 1.75; color: rgba(243,231,211,0.78); margin-bottom: 12px; }
+.shrine-about h3 { font-family: 'Cinzel', serif; font-size: 15px; color: var(--marigold); margin: 20px 0 8px; }
 .shrine-about strong { color: var(--marigold); }
-
-/* ---------- Daily blessing strip ---------- */
-.daily-strip {
-  margin-top: 32px;
-  padding: 20px;
-  border-top: 1px solid rgba(212,165,68,0.2);
-  border-bottom: 1px solid rgba(212,165,68,0.2);
-  text-align: left;
-}
-.daily-strip .label {
-  font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
-  color: rgba(212,165,68,0.6); margin-bottom: 8px;
-}
-.daily-strip .verse {
-  font-size: 14px; line-height: 1.7; color: rgba(243,231,211,0.85);
-  font-style: italic;
-}
-.daily-strip .verse-source {
-  margin-top: 10px; font-size: 11px; letter-spacing: 0.04em;
-  color: rgba(212,165,68,0.5); font-style: normal;
-}
-
-.ad-slot.inline {
-  margin: 36px auto 0;
-  min-height: 100px;
-}
-
-/* ---------- Toast ---------- */
-.toast {
-  position: fixed;
-  bottom: 28px; left: 50%;
-  transform: translateX(-50%) translateY(20px);
-  background: var(--gold-bright);
-  color: var(--smoke);
-  padding: 12px 24px;
-  border-radius: 30px;
-  font-size: 13.5px;
-  font-weight: 600;
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0.35s ease;
-  z-index: 100;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-  white-space: nowrap;
-  max-width: 90vw;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
+.daily-strip { margin-top: 32px; padding: 20px; border-top: 1px solid rgba(212,165,68,0.2); border-bottom: 1px solid rgba(212,165,68,0.2); text-align: left; }
+.daily-strip .label { font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(212,165,68,0.6); margin-bottom: 8px; }
+.daily-strip .verse { font-size: 14px; line-height: 1.7; color: rgba(243,231,211,0.85); font-style: italic; }
+.daily-strip .verse-source { margin-top: 10px; font-size: 11px; color: rgba(212,165,68,0.5); font-style: normal; }
+.ad-slot.inline { margin: 36px auto 0; min-height: 100px; }
+.toast { position: fixed; bottom: 28px; left: 50%; transform: translateX(-50%) translateY(20px); background: var(--gold-bright); color: var(--smoke); padding: 12px 24px; border-radius: 30px; font-size: 13.5px; font-weight: 600; opacity: 0; pointer-events: none; transition: all 0.35s ease; z-index: 100; box-shadow: 0 10px 30px rgba(0,0,0,0.4); white-space: nowrap; max-width: 90vw; }
 .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
-
-/* ---------- Footer ---------- */
-footer {
-  position: relative; z-index: 5;
-  text-align: center;
-  padding: 30px 20px 50px;
-  font-size: 11.5px;
-  color: rgba(243,231,211,0.35);
-  line-height: 1.8;
-}
+footer { position: relative; z-index: 5; text-align: center; padding: 30px 20px 50px; font-size: 11.5px; color: rgba(243,231,211,0.35); line-height: 1.8; }
 footer a { color: rgba(212,165,68,0.6); text-decoration: none; }
-
-/* ---------- Ad mock modal (simulated rewarded ad) ---------- */
-.ad-modal-overlay {
-  display: none;
-  position: fixed; inset: 0; z-index: 200;
-  background: rgba(0,0,0,0.85);
-  align-items: center; justify-content: center;
-}
+.ad-modal-overlay { display: none; position: fixed; inset: 0; z-index: 200; background: rgba(0,0,0,0.85); align-items: center; justify-content: center; }
 .ad-modal-overlay.active { display: flex; }
-.ad-modal {
-  background: var(--deep-maroon);
-  border: 1px solid rgba(212,165,68,0.4);
-  border-radius: 10px;
-  padding: 36px 28px;
-  max-width: 320px;
-  text-align: center;
-}
-.ad-modal-label {
-  font-size: 10.5px; letter-spacing: 0.15em; text-transform: uppercase;
-  color: rgba(212,165,68,0.6); margin-bottom: 14px;
-}
-.ad-timer-ring {
-  width: 64px; height: 64px;
-  margin: 0 auto 18px;
-  border-radius: 50%;
-  border: 3px solid rgba(212,165,68,0.2);
-  border-top-color: var(--gold-bright);
-  animation: spin 1s linear infinite;
-}
+.ad-modal { background: var(--deep-maroon); border: 1px solid rgba(212,165,68,0.4); border-radius: 10px; padding: 36px 28px; max-width: 320px; text-align: center; }
+.ad-modal-label { font-size: 10.5px; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(212,165,68,0.6); margin-bottom: 14px; }
+.ad-timer-ring { width: 64px; height: 64px; margin: 0 auto 18px; border-radius: 50%; border: 3px solid rgba(212,165,68,0.2); border-top-color: var(--gold-bright); animation: spin 1s linear infinite; }
 @keyframes spin { to { transform: rotate(360deg); } }
 .ad-modal p { font-size: 13px; color: rgba(243,231,211,0.7); }
-
-/* ---------- Static pages (About / Privacy / Contact) ---------- */
-.static-page {
-  position: relative; z-index: 5;
-  max-width: 680px;
-  margin: 0 auto;
-  padding: 36px 20px 60px;
-}
-.static-page h1 {
-  font-family: 'Cinzel', serif;
-  font-size: clamp(24px, 6vw, 34px);
-  color: var(--gold-bright);
-  margin-bottom: 18px;
-}
-.static-page h2 {
-  font-family: 'Cinzel', serif;
-  font-size: 18px;
-  color: var(--marigold);
-  margin: 28px 0 10px;
-}
-.static-page p, .static-page li {
-  font-size: 14px; line-height: 1.75; color: rgba(243,231,211,0.78);
-  margin-bottom: 14px;
-}
-.static-page ul { padding-left: 20px; margin-bottom: 14px; }
-.static-page a { color: var(--gold-bright); }
-.static-page .updated {
-  font-size: 12px; color: rgba(243,231,211,0.45); margin-bottom: 28px;
-}
-.contact-info {
-  background: rgba(0,0,0,0.3);
-  border: 1px solid rgba(212,165,68,0.25);
-  border-radius: 8px;
-  padding: 20px;
-  margin-top: 16px;
-}
-.contact-info p { margin-bottom: 8px; }
-
-/* Note: mobile sizing is the default (mobile-first).
-   Desktop enhancements are applied via min-width queries above. */
-
 </style>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8054274022999562" crossorigin="anonymous"></script>
-<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-TCWE1XRRET"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-TCWE1XRRET');
-</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-TCWE1XRRET');</script>
 </head>
 <body>
-
 <div class="grain"></div>
-
 <nav class="top-nav">
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="contact.html">Contact</a>
-  <a href="privacy.html">Privacy</a>
+  <a href="index.html">Home</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a>
 </nav>
-
-<div class="shrine-backdrop" style="background-image: url('https://cdn.pixabay.com/photo/2023/07/17/21/34/ai-generated-8133606_1280.png');"></div>
-
+<div class="shrine-backdrop" style="background-image: url('https://cdn.pixabay.com/photo/2016/11/14/04/13/ganesha-1822412_1280.jpg');"></div>
 <div class="shrine-inner" style="padding-top: 36px;">
-  <img class="shrine-portrait" src="https://cdn.pixabay.com/photo/2023/07/17/21/34/ai-generated-8133606_1280.png" alt="Lord Ganesha">
+  <img class="shrine-portrait" src="https://cdn.pixabay.com/photo/2016/11/14/04/13/ganesha-1822412_1280.jpg" alt="Lord Ganesha">
   <div class="shrine-name-script">श्री गणेशाय नमः</div>
   <div class="shrine-name-en">Ganesha · Vighnaharta</div>
   <p class="shrine-mantra">"Om Gan Ganpataye Namo Namah"</p>
-
   <div class="ad-slot leaderboard" style="margin-top:24px;">AD SLOT — 320×50 MOBILE / 728×90 DESKTOP (e.g. Google AdSense)</div>
-
   <div class="altar" id="altar-ganesha">
     <div class="altar-label">Your Offering</div>
     <div class="offering-stage">
@@ -641,7 +90,6 @@ footer a { color: rgba(212,165,68,0.6); text-decoration: none; }
       <div class="diya" id="diya-ganesha">🪔</div>
     </div>
     <div class="tier-badge" id="tier-ganesha">Simple Offering</div>
-
     <div class="offering-actions">
       <button class="btn btn-primary" onclick="lightDiya('ganesha')">Light a Diya — Free</button>
     </div>
@@ -649,43 +97,36 @@ footer a { color: rgba(212,165,68,0.6); text-decoration: none; }
       <button class="btn btn-share" onclick="shareTemple('ganesha', 'Ganesha', 'https://dailydarshan.online/ganesha.html')">Share to unlock Marigold Offering</button>
       <button class="btn btn-secondary" onclick="watchAd('ganesha')">Support with an ad ▸ unlock Full Aarti</button>
     </div>
-    <p class="unlock-note">
-      Lighting a diya is always free. <strong>Sharing</strong> or <strong>supporting with a short ad</strong>
-      simply makes your offering richer — flowers, incense, and a full aarti flame. Never required, always appreciated. 🙏
-    </p>
+    <p class="unlock-note">Lighting a diya is always free. <strong>Sharing</strong> or <strong>supporting with a short ad</strong> simply makes your offering richer — flowers, incense, and a full aarti flame. Never required, always appreciated. 🙏</p>
   </div>
 
   <div class="shrine-about">
     <div class="label">About Lord Ganesha</div>
-    
-          <p>Ganesha is the elephant-headed son of Shiva and Parvati, and the first deity invoked before
-          any new undertaking — a wedding, a new home, a business, the first page of an account book.
-          He is known as <strong>Vighnaharta</strong>, the remover of obstacles, and also as the one who can
-          place obstacles in the path of those who act without wisdom, a reminder that his blessing is
-          about right beginnings, not merely easy ones.</p>
-          <p>Ganesha's broken tusk, his large ears, and his small mouse companion Mushika are each read by
-          devotees as teachings: to listen more than you speak, to use what breaks you as a tool rather
-          than a wound, and to stay humble no matter how large your form. His festival, Ganesh Chaturthi,
-          is among the most widely celebrated in India, particularly in Maharashtra, where elaborate clay
-          idols are immersed in water at the close of the celebration as a teaching on impermanence.</p>
-        
+    <p>Ganesha is the elephant-headed son of Shiva and Parvati, and the first deity invoked before any new undertaking — a wedding, a new home, a business, the first page of an account book. He is known as <strong>Vighnaharta</strong>, the remover of obstacles, and also as the one who can place obstacles in the path of those who act without wisdom.</p>
+    <p>Ganesha's broken tusk, his large ears, and his small mouse companion Mushika are each read by devotees as teachings: to listen more than you speak, to use what breaks you as a tool rather than a wound, and to stay humble no matter how large your form.</p>
+    <h3>The Origin of Ganesha</h3>
+    <p>The most beloved story of Ganesha's birth begins with Parvati, who fashioned a boy from turmeric paste and the oils of her own body and breathed life into him, setting him to guard her door while she bathed. When Shiva returned and the child refused him entry, Shiva in his fury severed the boy's head. Parvati's grief was immeasurable. To restore her son, Shiva sent his ganas (attendants) to bring the head of the first creature found sleeping with its head facing north — they returned with an elephant's head, and Shiva placed it on the boy's body, restoring his life and declaring him the foremost among the gods, to be worshipped before all others.</p>
+    <p>Versions of this story vary across the Puranas, but the heart of each telling is the same: Ganesha's form — unusual, hybrid, requiring explanation — is itself a teaching. The sacred does not always arrive in the expected shape. The obstacles we face carry within them the possibility of unexpected wisdom.</p>
+    <h3>Symbols and What They Mean</h3>
+    <p>Every element of Ganesha's iconography is a carefully layered teaching. The elephant head represents supreme wisdom and the power of discrimination — the ability to perceive what is real beneath appearances. The large ears hear everything; the small mouth speaks sparingly. The trunk, which can uproot a tree and pick up a needle with equal ease, represents adaptability and the capacity to handle tasks of any scale.</p>
+    <p>The broken tusk has several explanations in different texts. In one, Ganesha broke it off to use as a pen when scribing the Mahabharata at Vyasa's dictation, agreeing to write without stopping only if Vyasa agreed to compose without pause. The mouse Mushika, Ganesha's vahana (vehicle), represents the mind — restless, quick, capable of gnawing through every obstacle — tamed and ridden by wisdom. That the vast Ganesha rides such a small creature is the teaching itself: the great is carried by what appears small when properly understood.</p>
+    <h3>Ganesh Chaturthi</h3>
+    <p>Ganesh Chaturthi, the festival celebrating Ganesha's birthday, falls on the fourth day of the bright fortnight in the month of Bhadrapada (August or September). It is among the most widely celebrated festivals in India, with its greatest expression in Maharashtra, where elaborate clay idols are installed in homes and public spaces, celebrated with music, prayers, and community feasting for ten days, and then carried in joyful procession to a river or the sea for immersion. The immersion, called Visarjan, is not a farewell but a teaching: the beloved form dissolves back into the water from which it came, and in letting go, something is understood about the nature of all form.</p>
+    <h3>Ganesha as Patron of Beginnings and Arts</h3>
+    <p>Ganesha is the patron of writers, students, and those who work with language and knowledge. In classical Sanskrit texts, authors traditionally open with an invocation to Ganesha, acknowledging that any work of intelligence and craft begins not with the author's cleverness but with the grace of the one who clears the path. Business ledgers traditionally bore his image on the first page. Students place his image near their books before an examination. Wednesday is his sacred day, and his seed mantra, <em>Om Gan Ganpataye Namo Namah</em>, is considered among the most accessible and powerful for daily use.</p>
   </div>
 
   <div class="daily-strip">
-    <div class="label">Today's Verse</div>
-    <div class="verse" id="verse-ganesha">Loading today's verse…</div>
+    <div class="label">Today's Shloka</div>
+    <div class="verse" id="verse-ganesha">Loading today's shloka…</div>
     <div class="verse-source" id="source-ganesha"></div>
   </div>
-
   <div class="ad-slot inline">AD SLOT — 300×250 IN-CONTENT (e.g. Google AdSense)</div>
-
   <div class="shrine-about" style="text-align:center;">
     <div class="label">Other Shrines</div>
-    <p style="font-size:13px;"><a href="shiva.html">Lord Shiva</a> · <a href="hanuman.html">Lord Hanuman</a> · <a href="lakshmi.html">Goddess Lakshmi</a> · <a href="krishna.html">Lord Krishna</a></p>
+    <p style="font-size:13px;"><a href="hanuman.html">Lord Hanuman</a> · <a href="shiva.html">Lord Shiva</a> · <a href="lakshmi.html">Goddess Lakshmi</a> · <a href="krishna.html">Lord Krishna</a></p>
   </div>
 </div>
-
-<!-- ============ SIMULATED REWARDED AD MODAL ============ -->
 <div class="ad-modal-overlay" id="ad-modal">
   <div class="ad-modal">
     <div class="ad-modal-label">Supporting the temple</div>
@@ -693,121 +134,36 @@ footer a { color: rgba(212,165,68,0.6); text-decoration: none; }
     <p>Loading a short sponsor message…<br>your offering will be enriched in a moment.</p>
   </div>
 </div>
-
 <div class="toast" id="toast"></div>
-
 <footer>
-  Deity images used under the Pixabay Content License. Daily Darshan is an independent devotional space
-  and is not affiliated with any temple trust or religious organisation.<br>
+  Deity images used under the Pixabay Content License. Daily Darshan is an independent devotional space and is not affiliated with any temple trust or religious organisation.<br>
   <a href="index.html">Home</a> · <a href="about.html">About</a> · <a href="contact.html">Contact</a> · <a href="privacy.html">Privacy Policy</a>
 </footer>
-
 <script>
-// ==========================================================================
-// DAILY VERSE ROTATION
-// Uses (day-of-year % library.length) so the sequence repeats every year.
-// Every verse has a named, verifiable source (see deity_data.py for the
-// full source list) — nothing here is invented.
-// ==========================================================================
-
-function dayOfYear(date) {
-  const start = new Date(date.getFullYear(), 0, 0);
-  const diff = date - start;
-  return Math.floor(diff / (1000 * 60 * 60 * 24));
-}
-
-function loadDailyVerse(deityKey, verses) {
-  const today = dayOfYear(new Date());
-  const verse = verses[today % verses.length];
-  const textEl = document.getElementById('verse-' + deityKey);
-  const sourceEl = document.getElementById('source-' + deityKey);
-  if (textEl) textEl.textContent = '"' + verse.text + '"';
-  if (sourceEl) sourceEl.textContent = '— ' + verse.source;
-}
-
-// ---------- State (in-memory only, no localStorage per platform rules) ----------
-const offeringState = {};
-
-const TIERS = [
-  { name: 'Simple Offering', icon: '🪔' },
-  { name: 'Marigold Offering', icon: '🪔🌼' },
-  { name: 'Full Aarti', icon: '🪔🌼🔥' }
-];
-
-function initOffering(deityKey) {
-  offeringState[deityKey] = { tier: 0, count: 0 };
-}
-
-function showToast(msg) {
-  const t = document.getElementById('toast');
-  t.textContent = msg;
-  t.classList.add('show');
-  clearTimeout(t._timer);
-  t._timer = setTimeout(() => t.classList.remove('show'), 2600);
-}
-
-function renderTier(deity) {
-  const tierInfo = TIERS[offeringState[deity].tier];
-  document.getElementById('tier-' + deity).textContent = tierInfo.name;
-  document.getElementById('diya-' + deity).textContent = tierInfo.icon;
-}
-
-function lightDiya(deity) {
-  offeringState[deity].count++;
-  const diya = document.getElementById('diya-' + deity);
-  diya.style.transform = 'scale(1.3)';
-  setTimeout(() => diya.style.transform = '', 250);
-  const count = offeringState[deity].count;
-  showToast('🙏 Your diya has been lit. ' + count + ' offering' + (count > 1 ? 's' : '') + ' so far today.');
-}
-
-function shareTemple(deity, deityName, pageUrl) {
-  const shareData = {
-    title: 'Daily Darshan',
-    text: 'I lit a diya for Lord ' + deityName + ' today on Daily Darshan 🪔 — light one for someone you love.',
-    url: pageUrl
-  };
-  if (navigator.share) {
-    navigator.share(shareData).then(() => unlockTier(deity, 1)).catch(() => {});
-  } else {
-    navigator.clipboard?.writeText(shareData.url);
-    showToast('Link copied! Share it to unlock a richer offering.');
-    unlockTier(deity, 1);
-  }
-}
-
-function watchAd(deity) {
-  const modal = document.getElementById('ad-modal');
-  modal.classList.add('active');
-  setTimeout(() => {
-    modal.classList.remove('active');
-    unlockTier(deity, 2);
-    showToast('🌼 Thank you for supporting the temple. Offering enriched!');
-  }, 2200);
-}
-
-function unlockTier(deity, minTier) {
-  if (offeringState[deity].tier < minTier) {
-    offeringState[deity].tier = minTier;
-    renderTier(deity);
-  }
-}
-
-
-  initOffering('ganesha');
-  loadDailyVerse('ganesha', [
-      { text: 'Vakratunda Mahakaya, Suryakoti Samaprabha — O Lord of the curved trunk and mighty form, radiant as a million suns, remove every obstacle from this work, always.', source: 'Vakratunda Mahakaya Shloka' },
-      { text: 'Ekadantaya Vidmahe, Vakratundaya Dhimahi, Tanno Danti Prachodayat — We meditate on the single-tusked Lord with the curved trunk; may that mighty one inspire and guide us.', source: 'Ganesha Gayatri Mantra' },
-      { text: 'Suklambaradharam Vishnum, Shashivarnam Chaturbhujam, Prasannavadanam Dhyayet, Sarvavighnopashantaye — We meditate on the Lord clad in white, moon-bright, four-armed and serene-faced, for the calming of all obstacles.', source: 'Dhyana Shloka, recited before any auspicious task' },
-      { text: "Agajanana Padmarkam, Gajananam Aharnisham, Anekadantam Bhaktanam, Ekadantam Upasmahe — Day and night we worship the elephant-faced one, who is the sun to Mother Parvati's lotus face, granter of many boons.", source: 'Ganesha Pancharatna, verse 1' },
-      { text: 'Om Gajananaya Namah — Salutations to the one with the elephant face, who teaches us to set aside ego and live dutifully.', source: 'Ganesha Ashtottara Shatanamavali (108 names)' },
-      { text: 'Om Vighnarajaya Namah — Salutations to the King of obstacles, who governs what stands in our way so that it may be cleared.', source: 'Ganesha Ashtottara Shatanamavali (108 names)' },
-      { text: 'Om Ganadhyakshaya Namah — Salutations to the leader of the celestial hosts, invoked for the wellbeing of communities and for steady leadership within ourselves.', source: 'Ganesha Ashtottara Shatanamavali (108 names)' },
-      { text: 'Whoever recites these twelve names of Ganesha three times a day will have every obstacle and fear removed, and will attain success — a promise sage Narada is said to have offered to the Lord.', source: 'Dvadasha Nama Stotra (Twelve Names of Ganesha)' },
-      { text: 'Om Shreem Gam Saubhagya Ganapataye Varavarada Sarvajanam Me Vashamanaya Swaha — We ask Lord Ganesha for good fortune in this life and the next, bowing to the one who blesses long life, health, and happiness.', source: 'Ganesh Shubh Labh Mantra' },
-      { text: 'Om Namo Siddhi Vinayakaya — O Lord of Wisdom and Happiness, you alone make every endeavour possible; remover of all obstacles, lord of all beings.', source: 'Siddhi Vinayak Mantra' }
-    ]);
+function dayOfYear(date){const start=new Date(date.getFullYear(),0,0);return Math.floor((date-start)/(1000*60*60*24));}
+function loadDailyVerse(deityKey,verses){const verse=verses[dayOfYear(new Date())%verses.length];const textEl=document.getElementById('verse-'+deityKey);const sourceEl=document.getElementById('source-'+deityKey);if(textEl)textEl.textContent='"'+verse.text+'"';if(sourceEl)sourceEl.textContent='— '+verse.source;}
+const offeringState={};
+const TIERS=[{name:'Simple Offering',icon:'🪔'},{name:'Marigold Offering',icon:'🪔🌼'},{name:'Full Aarti',icon:'🪔🌼🔥'}];
+function initOffering(k){offeringState[k]={tier:0,count:0};}
+function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');clearTimeout(t._timer);t._timer=setTimeout(()=>t.classList.remove('show'),2600);}
+function renderTier(deity){const ti=TIERS[offeringState[deity].tier];document.getElementById('tier-'+deity).textContent=ti.name;document.getElementById('diya-'+deity).textContent=ti.icon;}
+function lightDiya(deity){offeringState[deity].count++;const diya=document.getElementById('diya-'+deity);diya.style.transform='scale(1.3)';setTimeout(()=>diya.style.transform='',250);const c=offeringState[deity].count;showToast('🙏 Your diya has been lit. '+c+' offering'+(c>1?'s':'')+' so far today.');}
+function shareTemple(deity,deityName,pageUrl){const sd={title:'Daily Darshan',text:'I lit a diya for Lord '+deityName+' today on Daily Darshan 🪔 — light one for someone you love.',url:pageUrl};if(navigator.share){navigator.share(sd).then(()=>unlockTier(deity,1)).catch(()=>{});}else{navigator.clipboard?.writeText(sd.url);showToast('Link copied! Share it to unlock a richer offering.');unlockTier(deity,1);}}
+function watchAd(deity){const modal=document.getElementById('ad-modal');modal.classList.add('active');setTimeout(()=>{modal.classList.remove('active');unlockTier(deity,2);showToast('🌼 Thank you for supporting the temple. Offering enriched!');},2200);}
+function unlockTier(deity,minTier){if(offeringState[deity].tier<minTier){offeringState[deity].tier=minTier;renderTier(deity);}}
+initOffering('ganesha');
+loadDailyVerse('ganesha',[
+  {text:'Vakratunda Mahakaya Suryakoti Samaprabha — Nirvighnam Kuru Me Deva Sarva Karyeshu Sarvada.',source:'Ganesha Shloka, Traditional Invocation'},
+  {text:'Gajananam Bhuta Ganadi Sevitam — Kapittha Jambu Phalasara Bhaksitam. Umasutam Shoka Vinasha Karanam — Namami Vighnesvara Pada Pankajam.',source:'Ganesha Vandana, Traditional'},
+  {text:'Agajanana Padmarkam Gajananam Aharnisham — Anekadantam Bhaktanam Ekadantam Upasmahe.',source:'Ganesha Shloka, Traditional'},
+  {text:'Pranamya Shirasa Devam Gauriputram Vinayakam — Bhaktavasam Smarennityam Ayuh Kama Artha Siddhaye.',source:'Ganesha Dhyana Shloka'},
+  {text:'Shuklam Baradharam Vishnum Shashivarnam Chaturbhujam — Prasanna Vadanam Dhyayet Sarva Vighna Upashantaye.',source:'Ganesha Dhyana, Traditional'},
+  {text:'Om Gam Ganapataye Namaha — salutations to the lord of all ganas, the one who removes every obstacle on the path.',source:'Ganesha Beeja Mantra'},
+  {text:'Modaka hastam, charu vilasam — he who holds the sweet in his hand, whose play is beautiful, whose form is auspicious.',source:'Ganesha Ashtakam'},
+  {text:'Tvamaeva Pratyaksham Tattvamasi — You alone are the visible reality; salutations to Ganapati.',source:'Ganapati Atharvashirsha Upanishad'},
+  {text:'Tvam Vangmayascha Chinmayah — You are the essence of speech and pure consciousness itself.',source:'Ganapati Atharvashirsha Upanishad'},
+  {text:'Before every beginning, before every word spoken or written, we invoke the elephant-faced one — may he clear the path.',source:'Traditional Ganesha Prayer'}
+]);
 </script>
-
 </body>
 </html>

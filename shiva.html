@@ -4,636 +4,100 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Shiva Shrine — Om Namah Shivaya Meaning & Online Diya | Daily Darshan</title>
-<meta name="description" content="Light a virtual diya for Lord Shiva, read the Mahamrityunjaya Mantra and Om Namah Shivaya with full meaning, and learn the significance of Maha Shivaratri.">
+<meta name="description" content="Chant Om Namah Shivaya, light a virtual diya for Lord Shiva, and explore the meaning of Maha Shivaratri and the Mahamrityunjaya Mantra on Daily Darshan.">
 <link rel="canonical" href="https://dailydarshan.online/shiva.html">
 <style>
 :root {
-  --deep-maroon: #2b0f12;
-  --temple-red: #6b1622;
-  --marigold: #e8a13d;
-  --gold: #d4a544;
-  --gold-bright: #f4c95d;
-  --cream: #f3e7d3;
-  --smoke: #1a0a0c;
-  --sandalwood: #c98a4b;
+  --deep-maroon: #2b0f12; --temple-red: #6b1622; --marigold: #e8a13d;
+  --gold: #d4a544; --gold-bright: #f4c95d; --cream: #f3e7d3;
+  --smoke: #1a0a0c; --sandalwood: #c98a4b;
   --font-display: 'Tiro Devanagari Hindi', Georgia, serif;
   --font-body: 'Mukta', 'Segoe UI', sans-serif;
 }
-
 @import url('https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&family=Mukta:wght@300;400;500;600;700&family=Cinzel:wght@500;700&display=swap');
-
 * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
-
 html { -webkit-text-size-adjust: 100%; }
-
-body {
-  background: var(--smoke);
-  background-image:
-    radial-gradient(ellipse at top, rgba(107,22,34,0.4) 0%, transparent 60%),
-    radial-gradient(ellipse at bottom, rgba(43,15,18,0.6) 0%, transparent 60%);
-  color: var(--cream);
-  font-family: var(--font-body);
-  min-height: 100vh;
-  overflow-x: hidden;
-}
-
-.grain {
-  position: fixed; inset: 0; pointer-events: none; z-index: 1;
-  opacity: 0.04;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-}
-
-/* ---------- Top utility nav ---------- */
-.top-nav {
-  position: relative; z-index: 5;
-  display: flex; justify-content: center; gap: 18px;
-  padding: 14px 16px 0;
-  font-size: 11.5px;
-  letter-spacing: 0.05em;
-}
-.top-nav a {
-  color: rgba(243,231,211,0.55);
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  padding-bottom: 2px;
-}
+body { background: var(--smoke); background-image: radial-gradient(ellipse at top, rgba(107,22,34,0.4) 0%, transparent 60%), radial-gradient(ellipse at bottom, rgba(43,15,18,0.6) 0%, transparent 60%); color: var(--cream); font-family: var(--font-body); min-height: 100vh; overflow-x: hidden; }
+.grain { position: fixed; inset: 0; pointer-events: none; z-index: 1; opacity: 0.04; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+.top-nav { position: relative; z-index: 5; display: flex; justify-content: center; gap: 18px; padding: 14px 16px 0; font-size: 11.5px; letter-spacing: 0.05em; }
+.top-nav a { color: rgba(243,231,211,0.55); text-decoration: none; border-bottom: 1px solid transparent; padding-bottom: 2px; }
 .top-nav a:hover { color: var(--gold-bright); border-color: var(--gold-bright); }
-
-/* ---------- Header ---------- */
-header {
-  position: relative;
-  z-index: 5;
-  text-align: center;
-  padding: 28px 20px 24px;
-}
-
-.brand-mark {
-  font-family: var(--font-display);
-  font-size: 15px;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--marigold);
-  opacity: 0.85;
-}
-
-h1.site-title {
-  font-family: 'Cinzel', serif;
-  font-size: clamp(26px, 8vw, 44px);
-  font-weight: 700;
-  color: var(--gold-bright);
-  text-shadow: 0 0 24px rgba(244,201,93,0.35);
-  margin-top: 6px;
-  letter-spacing: 0.02em;
-}
-
-.site-title a { color: inherit; text-decoration: none; }
-
-.site-tagline {
-  margin-top: 8px;
-  font-size: 14px;
-  color: rgba(243,231,211,0.65);
-  font-style: italic;
-}
-
-/* ---------- Ad slot ---------- */
-.ad-slot {
-  position: relative;
-  z-index: 5;
-  max-width: 320px;
-  margin: 0 auto 24px;
-  padding: 8px;
-  border: 1px dashed rgba(212,165,68,0.3);
-  border-radius: 6px;
-  text-align: center;
-  font-size: 10px;
-  line-height: 1.4;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: rgba(212,165,68,0.45);
-  background: rgba(0,0,0,0.15);
-}
+.ad-slot { position: relative; z-index: 5; max-width: 320px; margin: 0 auto 24px; padding: 8px; border: 1px dashed rgba(212,165,68,0.3); border-radius: 6px; text-align: center; font-size: 10px; line-height: 1.4; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(212,165,68,0.45); background: rgba(0,0,0,0.15); }
 .ad-slot.leaderboard { min-height: 50px; display: flex; align-items: center; justify-content: center; }
-
-@media (min-width: 768px) {
-  .ad-slot { max-width: 728px; font-size: 11px; padding: 10px; }
-  .ad-slot.leaderboard { min-height: 90px; }
-}
-
-/* ---------- Deity grid ---------- */
-.deity-grid {
-  position: relative;
-  z-index: 5;
-  max-width: 1080px;
-  margin: 0 auto;
-  padding: 0 16px 48px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-@media (min-width: 700px) {
-  .deity-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 24px;
-    padding: 0 20px 60px;
-  }
-}
-
-.deity-card {
-  background: linear-gradient(165deg, rgba(107,22,34,0.55), rgba(26,10,12,0.85));
-  border: 1px solid rgba(212,165,68,0.25);
-  border-radius: 4px;
-  overflow: hidden;
-  position: relative;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  cursor: pointer;
-  display: block;
-  text-decoration: none;
-  color: inherit;
-}
-.deity-card::before {
-  content: '';
-  position: absolute; inset: 0;
-  background: linear-gradient(180deg, transparent 60%, rgba(0,0,0,0.5) 100%);
-  z-index: 2; pointer-events: none;
-}
-.deity-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 50px rgba(212,165,68,0.15);
-  border-color: rgba(244,201,93,0.5);
-}
-
-.deity-card img {
-  width: 100%;
-  height: 240px;
-  object-fit: cover;
-  object-position: top center;
-  display: block;
-  filter: saturate(1.05) contrast(1.05);
-}
-
-@media (min-width: 700px) {
-  .deity-card img { height: 280px; }
-}
-
-.deity-card .card-frame {
-  position: absolute; inset: 8px;
-  border: 1px solid rgba(244,201,93,0.35);
-  pointer-events: none; z-index: 3;
-}
-
-.deity-info {
-  position: relative; z-index: 3;
-  padding: 18px 20px 24px;
-}
-
-.deity-name-script {
-  font-family: var(--font-display);
-  font-size: 22px;
-  color: var(--gold-bright);
-}
-
-.deity-name-en {
-  font-size: 12px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: rgba(243,231,211,0.6);
-  margin-top: 2px;
-}
-
-.deity-epithet {
-  margin-top: 10px;
-  font-size: 13.5px;
-  line-height: 1.5;
-  color: rgba(243,231,211,0.8);
-}
-
-.enter-btn {
-  margin-top: 14px;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 12.5px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--gold-bright);
-  border-bottom: 1px solid var(--gold-bright);
-  padding-bottom: 2px;
-}
-
-/* ---------- Intro copy block on homepage ---------- */
-.intro-copy {
-  position: relative; z-index: 5;
-  max-width: 720px;
-  margin: 0 auto 36px;
-  padding: 0 20px;
-  font-size: 14px;
-  line-height: 1.75;
-  color: rgba(243,231,211,0.7);
-  text-align: center;
-}
-
-/* ---------- Shrine view ---------- */
-.shrine-view {
-  display: none;
-  position: fixed;
-  inset: 0;
-  z-index: 50;
-  background: var(--smoke);
-  overflow-y: auto;
-}
-.shrine-view.active { display: block; }
-
-.shrine-backdrop {
-  position: fixed; inset: 0; z-index: -1;
-  background-size: cover;
-  background-position: center 20%;
-  filter: blur(2px) brightness(0.35) saturate(1.1);
-  transform: scale(1.05);
-}
-
-.shrine-close {
-  position: fixed;
-  top: 14px; right: 14px;
-  z-index: 60;
-  background: rgba(0,0,0,0.55);
-  border: 1px solid rgba(244,201,93,0.4);
-  color: var(--gold-bright);
-  width: 44px; height: 44px;
-  border-radius: 50%;
-  font-size: 18px;
-  cursor: pointer;
-  display: flex; align-items: center; justify-content: center;
-}
-
-.shrine-inner {
-  position: relative;
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 64px 18px 60px;
-  text-align: center;
-}
-
-@media (min-width: 700px) {
-  .shrine-inner { padding: 70px 24px 80px; }
-}
-
-.shrine-portrait {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin: 0 auto 16px;
-  border: 3px solid var(--gold);
-  box-shadow: 0 0 0 6px rgba(212,165,68,0.12), 0 16px 44px rgba(0,0,0,0.6);
-}
-
-@media (min-width: 700px) {
-  .shrine-portrait {
-    width: 220px; height: 220px;
-    margin-bottom: 18px;
-    box-shadow: 0 0 0 8px rgba(212,165,68,0.12), 0 20px 60px rgba(0,0,0,0.6);
-  }
-}
-
-.shrine-name-script {
-  font-family: var(--font-display);
-  font-size: 32px;
-  color: var(--gold-bright);
-}
-.shrine-name-en {
-  font-size: 13px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: rgba(243,231,211,0.6);
-  margin-top: 4px;
-}
-
-.shrine-mantra {
-  margin-top: 18px;
-  font-family: var(--font-display);
-  font-style: italic;
-  font-size: 17px;
-  color: var(--marigold);
-  line-height: 1.8;
-}
-
-.shrine-desc {
-  margin-top: 16px;
-  font-size: 14px;
-  line-height: 1.7;
-  color: rgba(243,231,211,0.75);
-  max-width: 480px;
-  margin-left: auto; margin-right: auto;
-  text-align: left;
-}
-.shrine-desc p { margin-bottom: 12px; }
-.shrine-desc strong { color: var(--marigold); }
-
-/* ---------- Offering altar ---------- */
-.altar {
-  margin-top: 40px;
-  background: rgba(0,0,0,0.35);
-  border: 1px solid rgba(212,165,68,0.25);
-  border-radius: 8px;
-  padding: 28px 20px;
-}
-
-.altar-label {
-  font-size: 11.5px;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: rgba(212,165,68,0.6);
-  margin-bottom: 18px;
-}
-
-.offering-stage {
-  position: relative;
-  height: 160px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 18px;
-}
-
-.diya {
-  font-size: 64px;
-  filter: drop-shadow(0 0 18px rgba(244,201,93,0.4));
-  animation: flicker 2.2s ease-in-out infinite;
-  transition: transform 0.3s ease, filter 0.3s ease;
-}
-@keyframes flicker {
-  0%, 100% { transform: scale(1) rotate(-1deg); filter: drop-shadow(0 0 18px rgba(244,201,93,0.4)); }
-  50% { transform: scale(1.04) rotate(1deg); filter: drop-shadow(0 0 28px rgba(244,201,93,0.6)); }
-}
-
-.offering-glow {
-  position: absolute;
-  width: 200px; height: 200px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(244,201,93,0.25), transparent 70%);
-  pointer-events: none;
-  animation: pulse-glow 3s ease-in-out infinite;
-}
-@keyframes pulse-glow {
-  0%, 100% { opacity: 0.5; transform: scale(1); }
-  50% { opacity: 0.9; transform: scale(1.15); }
-}
-
-.tier-badge {
-  display: inline-block;
-  margin-top: 6px;
-  font-size: 11px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  padding: 4px 12px;
-  border-radius: 20px;
-  border: 1px solid rgba(212,165,68,0.4);
-  color: var(--gold-bright);
-  background: rgba(212,165,68,0.08);
-}
-
-.offering-actions {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  justify-content: center;
-  margin-top: 8px;
-}
-
-@media (min-width: 600px) {
-  .offering-actions { flex-direction: row; flex-wrap: wrap; }
-}
-
-.btn {
-  font-family: var(--font-body);
-  font-size: 14.5px;
-  font-weight: 600;
-  padding: 14px 22px;
-  min-height: 48px;
-  border-radius: 30px;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  width: 100%;
-}
-@media (min-width: 600px) {
-  .btn { width: auto; font-size: 13.5px; }
-}
-.btn:hover { transform: translateY(-2px); }
-.btn:active { transform: scale(0.97); }
-
-.btn-primary {
-  background: linear-gradient(135deg, var(--gold-bright), var(--marigold));
-  color: var(--smoke);
-  box-shadow: 0 8px 24px rgba(212,165,68,0.3);
-}
-.btn-secondary {
-  background: rgba(255,255,255,0.06);
-  color: var(--cream);
-  border: 1px solid rgba(243,231,211,0.25);
-}
-.btn-share {
-  background: rgba(107,22,34,0.4);
-  color: var(--gold-bright);
-  border: 1px solid rgba(212,165,68,0.4);
-}
+@media (min-width: 768px) { .ad-slot { max-width: 728px; font-size: 11px; padding: 10px; } .ad-slot.leaderboard { min-height: 90px; } }
+.shrine-backdrop { position: fixed; inset: 0; z-index: -1; background-size: cover; background-position: center 20%; filter: blur(2px) brightness(0.35) saturate(1.1); transform: scale(1.05); }
+.shrine-inner { position: relative; max-width: 720px; margin: 0 auto; padding: 64px 18px 60px; text-align: center; z-index: 5; }
+@media (min-width: 700px) { .shrine-inner { padding: 70px 24px 80px; } }
+.shrine-portrait { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin: 0 auto 16px; border: 3px solid var(--gold); box-shadow: 0 0 0 6px rgba(212,165,68,0.12), 0 16px 44px rgba(0,0,0,0.6); }
+@media (min-width: 700px) { .shrine-portrait { width: 220px; height: 220px; margin-bottom: 18px; } }
+.shrine-name-script { font-family: var(--font-display); font-size: 32px; color: var(--gold-bright); }
+.shrine-name-en { font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(243,231,211,0.6); margin-top: 4px; }
+.shrine-mantra { margin-top: 18px; font-family: var(--font-display); font-style: italic; font-size: 17px; color: var(--marigold); line-height: 1.8; }
+.altar { margin-top: 40px; background: rgba(0,0,0,0.35); border: 1px solid rgba(212,165,68,0.25); border-radius: 8px; padding: 28px 20px; }
+.altar-label { font-size: 11.5px; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(212,165,68,0.6); margin-bottom: 18px; }
+.offering-stage { position: relative; height: 160px; display: flex; align-items: center; justify-content: center; margin-bottom: 18px; }
+.diya { font-size: 64px; filter: drop-shadow(0 0 18px rgba(244,201,93,0.4)); animation: flicker 2.2s ease-in-out infinite; transition: transform 0.3s ease, filter 0.3s ease; }
+@keyframes flicker { 0%, 100% { transform: scale(1) rotate(-1deg); filter: drop-shadow(0 0 18px rgba(244,201,93,0.4)); } 50% { transform: scale(1.04) rotate(1deg); filter: drop-shadow(0 0 28px rgba(244,201,93,0.6)); } }
+.offering-glow { position: absolute; width: 200px; height: 200px; border-radius: 50%; background: radial-gradient(circle, rgba(244,201,93,0.25), transparent 70%); pointer-events: none; animation: pulse-glow 3s ease-in-out infinite; }
+@keyframes pulse-glow { 0%, 100% { opacity: 0.5; transform: scale(1); } 50% { opacity: 0.9; transform: scale(1.15); } }
+.tier-badge { display: inline-block; margin-top: 6px; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; border: 1px solid rgba(212,165,68,0.4); color: var(--gold-bright); background: rgba(212,165,68,0.08); }
+.offering-actions { display: flex; flex-direction: column; gap: 10px; justify-content: center; margin-top: 8px; }
+@media (min-width: 600px) { .offering-actions { flex-direction: row; flex-wrap: wrap; } }
+.btn { font-family: var(--font-body); font-size: 14.5px; font-weight: 600; padding: 14px 22px; min-height: 48px; border-radius: 30px; border: none; cursor: pointer; transition: transform 0.2s ease, box-shadow 0.2s ease; display: inline-flex; align-items: center; justify-content: center; gap: 8px; width: 100%; }
+@media (min-width: 600px) { .btn { width: auto; font-size: 13.5px; } }
+.btn:hover { transform: translateY(-2px); } .btn:active { transform: scale(0.97); }
+.btn-primary { background: linear-gradient(135deg, var(--gold-bright), var(--marigold)); color: var(--smoke); box-shadow: 0 8px 24px rgba(212,165,68,0.3); }
+.btn-secondary { background: rgba(255,255,255,0.06); color: var(--cream); border: 1px solid rgba(243,231,211,0.25); }
+.btn-share { background: rgba(107,22,34,0.4); color: var(--gold-bright); border: 1px solid rgba(212,165,68,0.4); }
 .btn:disabled { opacity: 0.4; cursor: not-allowed; transform: none; }
-
-.unlock-note {
-  margin-top: 14px;
-  font-size: 12px;
-  color: rgba(243,231,211,0.5);
-  line-height: 1.6;
-}
+.unlock-note { margin-top: 14px; font-size: 12px; color: rgba(243,231,211,0.5); line-height: 1.6; }
 .unlock-note strong { color: var(--marigold); }
-
-/* ---------- About section (within shrine: deity story) ---------- */
-.shrine-about {
-  margin-top: 36px;
-  text-align: left;
-  padding-top: 24px;
-  border-top: 1px solid rgba(212,165,68,0.15);
-}
-.shrine-about .label {
-  font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
-  color: rgba(212,165,68,0.6); margin-bottom: 12px;
-}
-.shrine-about p {
-  font-size: 14px; line-height: 1.75; color: rgba(243,231,211,0.78);
-  margin-bottom: 12px;
-}
+.shrine-about { margin-top: 36px; text-align: left; padding-top: 24px; border-top: 1px solid rgba(212,165,68,0.15); }
+.shrine-about .label { font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(212,165,68,0.6); margin-bottom: 12px; }
+.shrine-about p { font-size: 14px; line-height: 1.75; color: rgba(243,231,211,0.78); margin-bottom: 12px; }
+.shrine-about h3 { font-family: 'Cinzel', serif; font-size: 15px; color: var(--marigold); margin: 20px 0 8px; }
 .shrine-about strong { color: var(--marigold); }
-
-/* ---------- Daily blessing strip ---------- */
-.daily-strip {
-  margin-top: 32px;
-  padding: 20px;
-  border-top: 1px solid rgba(212,165,68,0.2);
-  border-bottom: 1px solid rgba(212,165,68,0.2);
-  text-align: left;
-}
-.daily-strip .label {
-  font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
-  color: rgba(212,165,68,0.6); margin-bottom: 8px;
-}
-.daily-strip .verse {
-  font-size: 14px; line-height: 1.7; color: rgba(243,231,211,0.85);
-  font-style: italic;
-}
-.daily-strip .verse-source {
-  margin-top: 10px; font-size: 11px; letter-spacing: 0.04em;
-  color: rgba(212,165,68,0.5); font-style: normal;
-}
-
-.ad-slot.inline {
-  margin: 36px auto 0;
-  min-height: 100px;
-}
-
-/* ---------- Toast ---------- */
-.toast {
-  position: fixed;
-  bottom: 28px; left: 50%;
-  transform: translateX(-50%) translateY(20px);
-  background: var(--gold-bright);
-  color: var(--smoke);
-  padding: 12px 24px;
-  border-radius: 30px;
-  font-size: 13.5px;
-  font-weight: 600;
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0.35s ease;
-  z-index: 100;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-  white-space: nowrap;
-  max-width: 90vw;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
+.daily-strip { margin-top: 32px; padding: 20px; border-top: 1px solid rgba(212,165,68,0.2); border-bottom: 1px solid rgba(212,165,68,0.2); text-align: left; }
+.daily-strip .label { font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(212,165,68,0.6); margin-bottom: 8px; }
+.daily-strip .verse { font-size: 14px; line-height: 1.7; color: rgba(243,231,211,0.85); font-style: italic; }
+.daily-strip .verse-source { margin-top: 10px; font-size: 11px; letter-spacing: 0.04em; color: rgba(212,165,68,0.5); font-style: normal; }
+.ad-slot.inline { margin: 36px auto 0; min-height: 100px; }
+.toast { position: fixed; bottom: 28px; left: 50%; transform: translateX(-50%) translateY(20px); background: var(--gold-bright); color: var(--smoke); padding: 12px 24px; border-radius: 30px; font-size: 13.5px; font-weight: 600; opacity: 0; pointer-events: none; transition: all 0.35s ease; z-index: 100; box-shadow: 0 10px 30px rgba(0,0,0,0.4); white-space: nowrap; max-width: 90vw; overflow: hidden; text-overflow: ellipsis; }
 .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
-
-/* ---------- Footer ---------- */
-footer {
-  position: relative; z-index: 5;
-  text-align: center;
-  padding: 30px 20px 50px;
-  font-size: 11.5px;
-  color: rgba(243,231,211,0.35);
-  line-height: 1.8;
-}
+footer { position: relative; z-index: 5; text-align: center; padding: 30px 20px 50px; font-size: 11.5px; color: rgba(243,231,211,0.35); line-height: 1.8; }
 footer a { color: rgba(212,165,68,0.6); text-decoration: none; }
-
-/* ---------- Ad mock modal (simulated rewarded ad) ---------- */
-.ad-modal-overlay {
-  display: none;
-  position: fixed; inset: 0; z-index: 200;
-  background: rgba(0,0,0,0.85);
-  align-items: center; justify-content: center;
-}
+.ad-modal-overlay { display: none; position: fixed; inset: 0; z-index: 200; background: rgba(0,0,0,0.85); align-items: center; justify-content: center; }
 .ad-modal-overlay.active { display: flex; }
-.ad-modal {
-  background: var(--deep-maroon);
-  border: 1px solid rgba(212,165,68,0.4);
-  border-radius: 10px;
-  padding: 36px 28px;
-  max-width: 320px;
-  text-align: center;
-}
-.ad-modal-label {
-  font-size: 10.5px; letter-spacing: 0.15em; text-transform: uppercase;
-  color: rgba(212,165,68,0.6); margin-bottom: 14px;
-}
-.ad-timer-ring {
-  width: 64px; height: 64px;
-  margin: 0 auto 18px;
-  border-radius: 50%;
-  border: 3px solid rgba(212,165,68,0.2);
-  border-top-color: var(--gold-bright);
-  animation: spin 1s linear infinite;
-}
+.ad-modal { background: var(--deep-maroon); border: 1px solid rgba(212,165,68,0.4); border-radius: 10px; padding: 36px 28px; max-width: 320px; text-align: center; }
+.ad-modal-label { font-size: 10.5px; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(212,165,68,0.6); margin-bottom: 14px; }
+.ad-timer-ring { width: 64px; height: 64px; margin: 0 auto 18px; border-radius: 50%; border: 3px solid rgba(212,165,68,0.2); border-top-color: var(--gold-bright); animation: spin 1s linear infinite; }
 @keyframes spin { to { transform: rotate(360deg); } }
 .ad-modal p { font-size: 13px; color: rgba(243,231,211,0.7); }
-
-/* ---------- Static pages (About / Privacy / Contact) ---------- */
-.static-page {
-  position: relative; z-index: 5;
-  max-width: 680px;
-  margin: 0 auto;
-  padding: 36px 20px 60px;
-}
-.static-page h1 {
-  font-family: 'Cinzel', serif;
-  font-size: clamp(24px, 6vw, 34px);
-  color: var(--gold-bright);
-  margin-bottom: 18px;
-}
-.static-page h2 {
-  font-family: 'Cinzel', serif;
-  font-size: 18px;
-  color: var(--marigold);
-  margin: 28px 0 10px;
-}
-.static-page p, .static-page li {
-  font-size: 14px; line-height: 1.75; color: rgba(243,231,211,0.78);
-  margin-bottom: 14px;
-}
-.static-page ul { padding-left: 20px; margin-bottom: 14px; }
-.static-page a { color: var(--gold-bright); }
-.static-page .updated {
-  font-size: 12px; color: rgba(243,231,211,0.45); margin-bottom: 28px;
-}
-.contact-info {
-  background: rgba(0,0,0,0.3);
-  border: 1px solid rgba(212,165,68,0.25);
-  border-radius: 8px;
-  padding: 20px;
-  margin-top: 16px;
-}
-.contact-info p { margin-bottom: 8px; }
-
-/* Note: mobile sizing is the default (mobile-first).
-   Desktop enhancements are applied via min-width queries above. */
-
 </style>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8054274022999562" crossorigin="anonymous"></script>
-<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-TCWE1XRRET"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-TCWE1XRRET');
 </script>
 </head>
 <body>
-
 <div class="grain"></div>
-
 <nav class="top-nav">
   <a href="index.html">Home</a>
   <a href="about.html">About</a>
   <a href="contact.html">Contact</a>
   <a href="privacy.html">Privacy</a>
 </nav>
-
-<div class="shrine-backdrop" style="background-image: url('https://cdn.pixabay.com/photo/2023/11/26/10/04/lord-shiva-8413252_1280.png');"></div>
-
+<div class="shrine-backdrop" style="background-image: url('https://cdn.pixabay.com/photo/2022/01/25/05/23/shiva-6964808_1280.jpg');"></div>
 <div class="shrine-inner" style="padding-top: 36px;">
-  <img class="shrine-portrait" src="https://cdn.pixabay.com/photo/2023/11/26/10/04/lord-shiva-8413252_1280.png" alt="Lord Shiva">
+  <img class="shrine-portrait" src="https://cdn.pixabay.com/photo/2022/01/25/05/23/shiva-6964808_1280.jpg" alt="Lord Shiva">
   <div class="shrine-name-script">ॐ नमः शिवाय</div>
   <div class="shrine-name-en">Shiva · Mahadev</div>
-  <p class="shrine-mantra">"Om Namah Shivaya"</p>
-
+  <p class="shrine-mantra">"Om Tryambakam Yajamahe Sugandhim Pushtivardhanam"</p>
   <div class="ad-slot leaderboard" style="margin-top:24px;">AD SLOT — 320×50 MOBILE / 728×90 DESKTOP (e.g. Google AdSense)</div>
-
   <div class="altar" id="altar-shiva">
     <div class="altar-label">Your Offering</div>
     <div class="offering-stage">
@@ -641,7 +105,6 @@ footer a { color: rgba(212,165,68,0.6); text-decoration: none; }
       <div class="diya" id="diya-shiva">🪔</div>
     </div>
     <div class="tier-badge" id="tier-shiva">Simple Offering</div>
-
     <div class="offering-actions">
       <button class="btn btn-primary" onclick="lightDiya('shiva')">Light a Diya — Free</button>
     </div>
@@ -649,42 +112,38 @@ footer a { color: rgba(212,165,68,0.6); text-decoration: none; }
       <button class="btn btn-share" onclick="shareTemple('shiva', 'Shiva', 'https://dailydarshan.online/shiva.html')">Share to unlock Marigold Offering</button>
       <button class="btn btn-secondary" onclick="watchAd('shiva')">Support with an ad ▸ unlock Full Aarti</button>
     </div>
-    <p class="unlock-note">
-      Lighting a diya is always free. <strong>Sharing</strong> or <strong>supporting with a short ad</strong>
-      simply makes your offering richer — flowers, incense, and a full aarti flame. Never required, always appreciated. 🙏
-    </p>
+    <p class="unlock-note">Lighting a diya is always free. <strong>Sharing</strong> or <strong>supporting with a short ad</strong> simply makes your offering richer — flowers, incense, and a full aarti flame. Never required, always appreciated. 🙏</p>
   </div>
 
   <div class="shrine-about">
     <div class="label">About Lord Shiva</div>
-    
-          <p>Shiva is one of the three principal forms of the divine in Hinduism, embodying destruction not
-          as violence but as the clearing away of what is outworn so that renewal becomes possible. He is
-          <strong>Mahadev</strong>, the great god, often depicted in deep meditation atop Mount Kailash, with
-          the crescent moon in his hair and the sacred Ganga flowing from his head.</p>
-          <p>Shiva is approached for inner stillness, for release from fear — including the fear of death —
-          and for the courage to let go of what no longer serves. His most chanted mantra, Om Namah Shivaya,
-          is one of the oldest in continuous use in human history, appearing in the Krishna Yajurveda. Mondays
-          are traditionally observed as days of Shiva worship, and Maha Shivaratri, "the great night of Shiva,"
-          is among the most significant festivals dedicated to him.</p>
-        
+    <p>Shiva is one of the three principal forms of the divine in Hinduism, embodying destruction not as violence but as the clearing away of what is outworn so that renewal becomes possible. He is <strong>Mahadev</strong>, the great god, often depicted in deep meditation atop Mount Kailash, with the crescent moon in his hair and the sacred Ganga flowing from his head.</p>
+    <p>Shiva is approached for inner stillness, for release from fear — including the fear of death — and for the courage to let go of what no longer serves. Mondays are traditionally observed as days of Shiva worship, and Maha Shivaratri, "the great night of Shiva," is among the most significant festivals dedicated to him.</p>
+    <h3>The Nature of Shiva</h3>
+    <p>Unlike many deities whose stories unfold primarily in domestic or courtly settings, Shiva's domain is the wilderness, the cremation ground, and the deep mountain silence. He is the god who dwells at the edges: ash-smeared, matted-haired, accompanied by ghosts and outcasts, the one to whom those who have nowhere else to turn can always come. In this sense, Shiva represents the understanding that the divine is not found only in beautiful, orderly, comfortable places — it is equally present in endings, in loss, in the bare ground of grief.</p>
+    <p>At the same time, Shiva is the supreme householder — his marriage to Parvati, the mountain goddess who won him through years of austere devotion, is one of the great love stories of Hindu mythology. Their son Ganesha is worshipped before every undertaking. Their son Kartikeya is the god of war and righteous battle. Shiva holds within himself the entire range of human experience: ascetic and husband, destroyer and nurturer, terrifying and deeply tender.</p>
+    <h3>The Linga and Its Meaning</h3>
+    <p>Shiva is most commonly worshipped through the Shivalinga, a cylindrical stone form that represents the formless, infinite dimension of the divine — what cannot be depicted as a face or a body. The linga rests within a yoni (the base), understood as the union of consciousness and energy, Shiva and Shakti, from which all creation arises. Devotees pour water, milk, honey, and bilva leaves over the linga in a ritual called abhisheka, an act of cooling the fierce energy of the god and receiving his blessings in return.</p>
+    <h3>Om Namah Shivaya and the Mahamrityunjaya Mantra</h3>
+    <p><em>Om Namah Shivaya</em> — "I bow to Shiva" — is one of the oldest mantras in continuous use in human history, appearing in the Krishna Yajurveda. Its five syllables Na, Ma, Shi, Va, Ya correspond to the five elements: earth, water, fire, air, and space. Chanting this mantra is understood as an alignment of the self with the structure of existence itself.</p>
+    <p>The Mahamrityunjaya Mantra — the great death-conquering mantra — is addressed to Shiva as Tryambaka, the three-eyed one. It is chanted for health, longevity, and protection from premature death, and is considered one of the most powerful mantras in the Vedic tradition. Hospitals, homes of the sick, and places of mourning often resound with its syllables as a reminder that consciousness does not end at the body's edge.</p>
+    <h3>Maha Shivaratri</h3>
+    <p>Maha Shivaratri falls on the fourteenth night of the dark fortnight in the month of Phalguna (February or March). Devotees observe a fast, stay awake through the night, and offer prayers every three hours in a vigil of devotion. The night of Shivaratri is considered especially auspicious for meditation — the planetary alignment is said to support an upward movement of energy in the spine, making the night naturally conducive to inner stillness. In the great temples of Varanasi, Ujjain, and Somnath, hundreds of thousands gather to witness the abhisheka of the linga and to carry their own small diyas through the night.</p>
+    <h3>Why Devotees Light a Diya for Shiva</h3>
+    <p>Shiva holds fire as both symbol and tool: the damaru drum he holds creates the universe with its rhythm, and the flame in his other hand dissolves it again. To light a diya for Shiva is to participate in this eternal cycle — to acknowledge that what has served its purpose can be released, and that in the clearing, something truer becomes possible. Many devotees find in Shiva's worship a permission to let go: of fear, of grief, of identities that have grown too tight.</p>
   </div>
 
   <div class="daily-strip">
-    <div class="label">Today's Verse</div>
-    <div class="verse" id="verse-shiva">Loading today's verse…</div>
+    <div class="label">Today's Mantra</div>
+    <div class="verse" id="verse-shiva">Loading today's mantra…</div>
     <div class="verse-source" id="source-shiva"></div>
   </div>
-
   <div class="ad-slot inline">AD SLOT — 300×250 IN-CONTENT (e.g. Google AdSense)</div>
-
   <div class="shrine-about" style="text-align:center;">
     <div class="label">Other Shrines</div>
     <p style="font-size:13px;"><a href="hanuman.html">Lord Hanuman</a> · <a href="ganesha.html">Lord Ganesha</a> · <a href="lakshmi.html">Goddess Lakshmi</a> · <a href="krishna.html">Lord Krishna</a></p>
   </div>
 </div>
-
-<!-- ============ SIMULATED REWARDED AD MODAL ============ -->
 <div class="ad-modal-overlay" id="ad-modal">
   <div class="ad-modal">
     <div class="ad-modal-label">Supporting the temple</div>
@@ -692,119 +151,40 @@ footer a { color: rgba(212,165,68,0.6); text-decoration: none; }
     <p>Loading a short sponsor message…<br>your offering will be enriched in a moment.</p>
   </div>
 </div>
-
 <div class="toast" id="toast"></div>
-
 <footer>
-  Deity images used under the Pixabay Content License. Daily Darshan is an independent devotional space
-  and is not affiliated with any temple trust or religious organisation.<br>
+  Deity images used under the Pixabay Content License. Daily Darshan is an independent devotional space and is not affiliated with any temple trust or religious organisation.<br>
   <a href="index.html">Home</a> · <a href="about.html">About</a> · <a href="contact.html">Contact</a> · <a href="privacy.html">Privacy Policy</a>
 </footer>
-
 <script>
-// ==========================================================================
-// DAILY VERSE ROTATION
-// Uses (day-of-year % library.length) so the sequence repeats every year.
-// Every verse has a named, verifiable source (see deity_data.py for the
-// full source list) — nothing here is invented.
-// ==========================================================================
-
-function dayOfYear(date) {
-  const start = new Date(date.getFullYear(), 0, 0);
-  const diff = date - start;
-  return Math.floor(diff / (1000 * 60 * 60 * 24));
-}
-
+function dayOfYear(date) { const start = new Date(date.getFullYear(), 0, 0); return Math.floor((date - start) / (1000 * 60 * 60 * 24)); }
 function loadDailyVerse(deityKey, verses) {
-  const today = dayOfYear(new Date());
-  const verse = verses[today % verses.length];
+  const verse = verses[dayOfYear(new Date()) % verses.length];
   const textEl = document.getElementById('verse-' + deityKey);
   const sourceEl = document.getElementById('source-' + deityKey);
   if (textEl) textEl.textContent = '"' + verse.text + '"';
   if (sourceEl) sourceEl.textContent = '— ' + verse.source;
 }
-
-// ---------- State (in-memory only, no localStorage per platform rules) ----------
 const offeringState = {};
-
-const TIERS = [
-  { name: 'Simple Offering', icon: '🪔' },
-  { name: 'Marigold Offering', icon: '🪔🌼' },
-  { name: 'Full Aarti', icon: '🪔🌼🔥' }
-];
-
-function initOffering(deityKey) {
-  offeringState[deityKey] = { tier: 0, count: 0 };
-}
-
-function showToast(msg) {
-  const t = document.getElementById('toast');
-  t.textContent = msg;
-  t.classList.add('show');
-  clearTimeout(t._timer);
-  t._timer = setTimeout(() => t.classList.remove('show'), 2600);
-}
-
-function renderTier(deity) {
-  const tierInfo = TIERS[offeringState[deity].tier];
-  document.getElementById('tier-' + deity).textContent = tierInfo.name;
-  document.getElementById('diya-' + deity).textContent = tierInfo.icon;
-}
-
-function lightDiya(deity) {
-  offeringState[deity].count++;
-  const diya = document.getElementById('diya-' + deity);
-  diya.style.transform = 'scale(1.3)';
-  setTimeout(() => diya.style.transform = '', 250);
-  const count = offeringState[deity].count;
-  showToast('🙏 Your diya has been lit. ' + count + ' offering' + (count > 1 ? 's' : '') + ' so far today.');
-}
-
-function shareTemple(deity, deityName, pageUrl) {
-  const shareData = {
-    title: 'Daily Darshan',
-    text: 'I lit a diya for Lord ' + deityName + ' today on Daily Darshan 🪔 — light one for someone you love.',
-    url: pageUrl
-  };
-  if (navigator.share) {
-    navigator.share(shareData).then(() => unlockTier(deity, 1)).catch(() => {});
-  } else {
-    navigator.clipboard?.writeText(shareData.url);
-    showToast('Link copied! Share it to unlock a richer offering.');
-    unlockTier(deity, 1);
-  }
-}
-
-function watchAd(deity) {
-  const modal = document.getElementById('ad-modal');
-  modal.classList.add('active');
-  setTimeout(() => {
-    modal.classList.remove('active');
-    unlockTier(deity, 2);
-    showToast('🌼 Thank you for supporting the temple. Offering enriched!');
-  }, 2200);
-}
-
-function unlockTier(deity, minTier) {
-  if (offeringState[deity].tier < minTier) {
-    offeringState[deity].tier = minTier;
-    renderTier(deity);
-  }
-}
-
-
-  initOffering('shiva');
-  loadDailyVerse('shiva', [
-      { text: 'Om Namah Shivaya — I bow to Shiva. Shiva is the supreme reality, the inner Self that dwells in all beings.', source: 'Panchakshara (Five-Syllable) Mantra, Sri Rudram, Krishna Yajurveda' },
-      { text: 'Om Tryambakam Yajamahe Sugandhim Pushtivardhanam, Urvarukamiva Bandhanan Mrityor Mukshiya Maamritat — We worship the three-eyed Lord, fragrant and nourishing all life; as the cucumber is freed from its stem, may we be freed from death, not from immortality.', source: 'Mahamrityunjaya Mantra, Rig Veda' },
-      { text: 'Om Tatpurushaya Vidmahe Mahadevaya Dhimahi, Tanno Rudrah Prachodayat — We meditate on that great Being, the great God; may Rudra illuminate our understanding.', source: 'Shiva Gayatri Mantra' },
-      { text: 'Om Namo Bhagavate Rudraya — Salutations to the divine Lord Rudra, the fierce form of Shiva invoked for protection from negativity and harm.', source: 'Rudra Mantra' },
-      { text: 'His feet are the letter Na. His navel is the letter Ma. His shoulders are the letter Shi. His mouth is the letter Va. His radiant crown is Ya. Thus is the five-lettered form of Shiva.', source: 'Tirumantiram, verse 941 (Tamil Shaiva Siddhanta scripture)' },
-      { text: 'Namah Shivaya represents all mantras and all scriptures. Namah Shivaya is our very soul, our body, our possessions. Namah Shivaya has become our sure protection.', source: 'Traditional Panchakshara devotional verse' },
-      { text: 'Kara-charana-kritam vaak-kaayajam karma-jam vaa, shravana-nayanajam vaa maanasam vaapradham — Whatever wrong I have done by hand or foot, by speech, by body, by ear or eye, or by mind, knowingly or unknowingly, forgive me, O Shiva of infinite forms.', source: 'Shiva Aparadha Kshamapana Stotram (Prayer for Forgiveness to Shiva)' },
-      { text: 'Chanting the five sacred syllables purifies the five elements that compose the body: earth, water, fire, air, and ether, each one cleansed by its corresponding sound.', source: 'Teaching attributed to Swami Muktananda on the Panchakshara Mantra' }
-    ]);
+const TIERS = [{ name: 'Simple Offering', icon: '🪔' }, { name: 'Marigold Offering', icon: '🪔🌼' }, { name: 'Full Aarti', icon: '🪔🌼🔥' }];
+function initOffering(deityKey) { offeringState[deityKey] = { tier: 0, count: 0 }; }
+function showToast(msg) { const t = document.getElementById('toast'); t.textContent = msg; t.classList.add('show'); clearTimeout(t._timer); t._timer = setTimeout(() => t.classList.remove('show'), 2600); }
+function renderTier(deity) { const tierInfo = TIERS[offeringState[deity].tier]; document.getElementById('tier-' + deity).textContent = tierInfo.name; document.getElementById('diya-' + deity).textContent = tierInfo.icon; }
+function lightDiya(deity) { offeringState[deity].count++; const diya = document.getElementById('diya-' + deity); diya.style.transform = 'scale(1.3)'; setTimeout(() => diya.style.transform = '', 250); const count = offeringState[deity].count; showToast('🙏 Your diya has been lit. ' + count + ' offering' + (count > 1 ? 's' : '') + ' so far today.'); }
+function shareTemple(deity, deityName, pageUrl) { const shareData = { title: 'Daily Darshan', text: 'I lit a diya for Lord ' + deityName + ' today on Daily Darshan 🪔 — light one for someone you love.', url: pageUrl }; if (navigator.share) { navigator.share(shareData).then(() => unlockTier(deity, 1)).catch(() => {}); } else { navigator.clipboard?.writeText(shareData.url); showToast('Link copied! Share it to unlock a richer offering.'); unlockTier(deity, 1); } }
+function watchAd(deity) { const modal = document.getElementById('ad-modal'); modal.classList.add('active'); setTimeout(() => { modal.classList.remove('active'); unlockTier(deity, 2); showToast('🌼 Thank you for supporting the temple. Offering enriched!'); }, 2200); }
+function unlockTier(deity, minTier) { if (offeringState[deity].tier < minTier) { offeringState[deity].tier = minTier; renderTier(deity); } }
+initOffering('shiva');
+loadDailyVerse('shiva', [
+  { text: 'Om Tryambakam Yajamahe Sugandhim Pushtivardhanam — Urvarukamiva Bandhanan Mrityor Mukshiya Maamritat.', source: 'Mahamrityunjaya Mantra, Rigveda 7.59.12' },
+  { text: 'Om Namah Shivaya — the five-syllable mantra of Shiva, corresponding to the five elements of creation.', source: 'Krishna Yajurveda, Shri Rudram' },
+  { text: 'Karpur Gauram Karunavataram — He who is white as camphor, an incarnation of compassion, the life of the universe.', source: 'Traditional Shiva Shloka' },
+  { text: 'Shiva is the witness of all, the inner self of all, the abode of all, the refuge of all.', source: 'Shiva Purana' },
+  { text: 'He who is beyond all qualities, yet the source of all qualities — salutations to Shiva.', source: 'Shiva Mahimna Stotram' },
+  { text: 'The one who wears the crescent moon, who holds the Ganga in his matted locks — salutations to Mahadev.', source: 'Shiva Mahimna Stotram' },
+  { text: 'May Shiva, the destroyer of Tripura, the blue-throated one who drank the poison for the welfare of all, protect us.', source: 'Traditional Shiva Prayer' },
+  { text: 'He who is the beginning and the end, the eternal light within the heart — Om Namah Shivaya.', source: 'Shiva Upanishad' }
+]);
 </script>
-
 </body>
 </html>

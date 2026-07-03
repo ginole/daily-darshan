@@ -23,9 +23,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&family=Mukta:wght@300;400;500;600;700&family=Cinzel:wght@500;700&display=swap');
 
 * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
-
 html { -webkit-text-size-adjust: 100%; }
-
 body {
   background: var(--smoke);
   background-image:
@@ -36,14 +34,11 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
 }
-
 .grain {
   position: fixed; inset: 0; pointer-events: none; z-index: 1;
   opacity: 0.04;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
-
-/* ---------- Top utility nav ---------- */
 .top-nav {
   position: relative; z-index: 5;
   display: flex; justify-content: center; gap: 18px;
@@ -51,589 +46,115 @@ body {
   font-size: 11.5px;
   letter-spacing: 0.05em;
 }
-.top-nav a {
-  color: rgba(243,231,211,0.55);
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  padding-bottom: 2px;
-}
+.top-nav a { color: rgba(243,231,211,0.55); text-decoration: none; border-bottom: 1px solid transparent; padding-bottom: 2px; }
 .top-nav a:hover { color: var(--gold-bright); border-color: var(--gold-bright); }
-
-/* ---------- Header ---------- */
-header {
-  position: relative;
-  z-index: 5;
-  text-align: center;
-  padding: 28px 20px 24px;
-}
-
-.brand-mark {
-  font-family: var(--font-display);
-  font-size: 15px;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--marigold);
-  opacity: 0.85;
-}
-
-h1.site-title {
-  font-family: 'Cinzel', serif;
-  font-size: clamp(26px, 8vw, 44px);
-  font-weight: 700;
-  color: var(--gold-bright);
-  text-shadow: 0 0 24px rgba(244,201,93,0.35);
-  margin-top: 6px;
-  letter-spacing: 0.02em;
-}
-
-.site-title a { color: inherit; text-decoration: none; }
-
-.site-tagline {
-  margin-top: 8px;
-  font-size: 14px;
-  color: rgba(243,231,211,0.65);
-  font-style: italic;
-}
-
-/* ---------- Ad slot ---------- */
 .ad-slot {
-  position: relative;
-  z-index: 5;
-  max-width: 320px;
-  margin: 0 auto 24px;
-  padding: 8px;
-  border: 1px dashed rgba(212,165,68,0.3);
-  border-radius: 6px;
-  text-align: center;
-  font-size: 10px;
-  line-height: 1.4;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: rgba(212,165,68,0.45);
-  background: rgba(0,0,0,0.15);
+  position: relative; z-index: 5;
+  max-width: 320px; margin: 0 auto 24px; padding: 8px;
+  border: 1px dashed rgba(212,165,68,0.3); border-radius: 6px;
+  text-align: center; font-size: 10px; line-height: 1.4;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  color: rgba(212,165,68,0.45); background: rgba(0,0,0,0.15);
 }
 .ad-slot.leaderboard { min-height: 50px; display: flex; align-items: center; justify-content: center; }
-
 @media (min-width: 768px) {
   .ad-slot { max-width: 728px; font-size: 11px; padding: 10px; }
   .ad-slot.leaderboard { min-height: 90px; }
 }
-
-/* ---------- Deity grid ---------- */
-.deity-grid {
-  position: relative;
-  z-index: 5;
-  max-width: 1080px;
-  margin: 0 auto;
-  padding: 0 16px 48px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-@media (min-width: 700px) {
-  .deity-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 24px;
-    padding: 0 20px 60px;
-  }
-}
-
-.deity-card {
-  background: linear-gradient(165deg, rgba(107,22,34,0.55), rgba(26,10,12,0.85));
-  border: 1px solid rgba(212,165,68,0.25);
-  border-radius: 4px;
-  overflow: hidden;
-  position: relative;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  cursor: pointer;
-  display: block;
-  text-decoration: none;
-  color: inherit;
-}
-.deity-card::before {
-  content: '';
-  position: absolute; inset: 0;
-  background: linear-gradient(180deg, transparent 60%, rgba(0,0,0,0.5) 100%);
-  z-index: 2; pointer-events: none;
-}
-.deity-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 50px rgba(212,165,68,0.15);
-  border-color: rgba(244,201,93,0.5);
-}
-
-.deity-card img {
-  width: 100%;
-  height: 240px;
-  object-fit: cover;
-  object-position: top center;
-  display: block;
-  filter: saturate(1.05) contrast(1.05);
-}
-
-@media (min-width: 700px) {
-  .deity-card img { height: 280px; }
-}
-
-.deity-card .card-frame {
-  position: absolute; inset: 8px;
-  border: 1px solid rgba(244,201,93,0.35);
-  pointer-events: none; z-index: 3;
-}
-
-.deity-info {
-  position: relative; z-index: 3;
-  padding: 18px 20px 24px;
-}
-
-.deity-name-script {
-  font-family: var(--font-display);
-  font-size: 22px;
-  color: var(--gold-bright);
-}
-
-.deity-name-en {
-  font-size: 12px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: rgba(243,231,211,0.6);
-  margin-top: 2px;
-}
-
-.deity-epithet {
-  margin-top: 10px;
-  font-size: 13.5px;
-  line-height: 1.5;
-  color: rgba(243,231,211,0.8);
-}
-
-.enter-btn {
-  margin-top: 14px;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 12.5px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--gold-bright);
-  border-bottom: 1px solid var(--gold-bright);
-  padding-bottom: 2px;
-}
-
-/* ---------- Intro copy block on homepage ---------- */
-.intro-copy {
-  position: relative; z-index: 5;
-  max-width: 720px;
-  margin: 0 auto 36px;
-  padding: 0 20px;
-  font-size: 14px;
-  line-height: 1.75;
-  color: rgba(243,231,211,0.7);
-  text-align: center;
-}
-
-/* ---------- Shrine view ---------- */
-.shrine-view {
-  display: none;
-  position: fixed;
-  inset: 0;
-  z-index: 50;
-  background: var(--smoke);
-  overflow-y: auto;
-}
-.shrine-view.active { display: block; }
-
 .shrine-backdrop {
   position: fixed; inset: 0; z-index: -1;
-  background-size: cover;
-  background-position: center 20%;
+  background-size: cover; background-position: center 20%;
   filter: blur(2px) brightness(0.35) saturate(1.1);
   transform: scale(1.05);
 }
-
-.shrine-close {
-  position: fixed;
-  top: 14px; right: 14px;
-  z-index: 60;
-  background: rgba(0,0,0,0.55);
-  border: 1px solid rgba(244,201,93,0.4);
-  color: var(--gold-bright);
-  width: 44px; height: 44px;
-  border-radius: 50%;
-  font-size: 18px;
-  cursor: pointer;
-  display: flex; align-items: center; justify-content: center;
-}
-
 .shrine-inner {
-  position: relative;
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 64px 18px 60px;
-  text-align: center;
+  position: relative; max-width: 720px; margin: 0 auto;
+  padding: 64px 18px 60px; text-align: center; z-index: 5;
 }
-
-@media (min-width: 700px) {
-  .shrine-inner { padding: 70px 24px 80px; }
-}
-
+@media (min-width: 700px) { .shrine-inner { padding: 70px 24px 80px; } }
 .shrine-portrait {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin: 0 auto 16px;
-  border: 3px solid var(--gold);
+  width: 150px; height: 150px; border-radius: 50%; object-fit: cover;
+  margin: 0 auto 16px; border: 3px solid var(--gold);
   box-shadow: 0 0 0 6px rgba(212,165,68,0.12), 0 16px 44px rgba(0,0,0,0.6);
 }
-
 @media (min-width: 700px) {
-  .shrine-portrait {
-    width: 220px; height: 220px;
-    margin-bottom: 18px;
-    box-shadow: 0 0 0 8px rgba(212,165,68,0.12), 0 20px 60px rgba(0,0,0,0.6);
-  }
+  .shrine-portrait { width: 220px; height: 220px; margin-bottom: 18px; box-shadow: 0 0 0 8px rgba(212,165,68,0.12), 0 20px 60px rgba(0,0,0,0.6); }
 }
-
-.shrine-name-script {
-  font-family: var(--font-display);
-  font-size: 32px;
-  color: var(--gold-bright);
-}
-.shrine-name-en {
-  font-size: 13px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: rgba(243,231,211,0.6);
-  margin-top: 4px;
-}
-
-.shrine-mantra {
-  margin-top: 18px;
-  font-family: var(--font-display);
-  font-style: italic;
-  font-size: 17px;
-  color: var(--marigold);
-  line-height: 1.8;
-}
-
-.shrine-desc {
-  margin-top: 16px;
-  font-size: 14px;
-  line-height: 1.7;
-  color: rgba(243,231,211,0.75);
-  max-width: 480px;
-  margin-left: auto; margin-right: auto;
-  text-align: left;
-}
-.shrine-desc p { margin-bottom: 12px; }
-.shrine-desc strong { color: var(--marigold); }
-
-/* ---------- Offering altar ---------- */
+.shrine-name-script { font-family: var(--font-display); font-size: 32px; color: var(--gold-bright); }
+.shrine-name-en { font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(243,231,211,0.6); margin-top: 4px; }
+.shrine-mantra { margin-top: 18px; font-family: var(--font-display); font-style: italic; font-size: 17px; color: var(--marigold); line-height: 1.8; }
 .altar {
-  margin-top: 40px;
-  background: rgba(0,0,0,0.35);
-  border: 1px solid rgba(212,165,68,0.25);
-  border-radius: 8px;
-  padding: 28px 20px;
+  margin-top: 40px; background: rgba(0,0,0,0.35);
+  border: 1px solid rgba(212,165,68,0.25); border-radius: 8px; padding: 28px 20px;
 }
-
-.altar-label {
-  font-size: 11.5px;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: rgba(212,165,68,0.6);
-  margin-bottom: 18px;
-}
-
-.offering-stage {
-  position: relative;
-  height: 160px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 18px;
-}
-
-.diya {
-  font-size: 64px;
-  filter: drop-shadow(0 0 18px rgba(244,201,93,0.4));
-  animation: flicker 2.2s ease-in-out infinite;
-  transition: transform 0.3s ease, filter 0.3s ease;
-}
+.altar-label { font-size: 11.5px; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(212,165,68,0.6); margin-bottom: 18px; }
+.offering-stage { position: relative; height: 160px; display: flex; align-items: center; justify-content: center; margin-bottom: 18px; }
+.diya { font-size: 64px; filter: drop-shadow(0 0 18px rgba(244,201,93,0.4)); animation: flicker 2.2s ease-in-out infinite; transition: transform 0.3s ease, filter 0.3s ease; }
 @keyframes flicker {
   0%, 100% { transform: scale(1) rotate(-1deg); filter: drop-shadow(0 0 18px rgba(244,201,93,0.4)); }
   50% { transform: scale(1.04) rotate(1deg); filter: drop-shadow(0 0 28px rgba(244,201,93,0.6)); }
 }
-
-.offering-glow {
-  position: absolute;
-  width: 200px; height: 200px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(244,201,93,0.25), transparent 70%);
-  pointer-events: none;
-  animation: pulse-glow 3s ease-in-out infinite;
-}
-@keyframes pulse-glow {
-  0%, 100% { opacity: 0.5; transform: scale(1); }
-  50% { opacity: 0.9; transform: scale(1.15); }
-}
-
-.tier-badge {
-  display: inline-block;
-  margin-top: 6px;
-  font-size: 11px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  padding: 4px 12px;
-  border-radius: 20px;
-  border: 1px solid rgba(212,165,68,0.4);
-  color: var(--gold-bright);
-  background: rgba(212,165,68,0.08);
-}
-
-.offering-actions {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  justify-content: center;
-  margin-top: 8px;
-}
-
-@media (min-width: 600px) {
-  .offering-actions { flex-direction: row; flex-wrap: wrap; }
-}
-
-.btn {
-  font-family: var(--font-body);
-  font-size: 14.5px;
-  font-weight: 600;
-  padding: 14px 22px;
-  min-height: 48px;
-  border-radius: 30px;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  width: 100%;
-}
-@media (min-width: 600px) {
-  .btn { width: auto; font-size: 13.5px; }
-}
+.offering-glow { position: absolute; width: 200px; height: 200px; border-radius: 50%; background: radial-gradient(circle, rgba(244,201,93,0.25), transparent 70%); pointer-events: none; animation: pulse-glow 3s ease-in-out infinite; }
+@keyframes pulse-glow { 0%, 100% { opacity: 0.5; transform: scale(1); } 50% { opacity: 0.9; transform: scale(1.15); } }
+.tier-badge { display: inline-block; margin-top: 6px; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; border: 1px solid rgba(212,165,68,0.4); color: var(--gold-bright); background: rgba(212,165,68,0.08); }
+.offering-actions { display: flex; flex-direction: column; gap: 10px; justify-content: center; margin-top: 8px; }
+@media (min-width: 600px) { .offering-actions { flex-direction: row; flex-wrap: wrap; } }
+.btn { font-family: var(--font-body); font-size: 14.5px; font-weight: 600; padding: 14px 22px; min-height: 48px; border-radius: 30px; border: none; cursor: pointer; transition: transform 0.2s ease, box-shadow 0.2s ease; display: inline-flex; align-items: center; justify-content: center; gap: 8px; width: 100%; }
+@media (min-width: 600px) { .btn { width: auto; font-size: 13.5px; } }
 .btn:hover { transform: translateY(-2px); }
 .btn:active { transform: scale(0.97); }
-
-.btn-primary {
-  background: linear-gradient(135deg, var(--gold-bright), var(--marigold));
-  color: var(--smoke);
-  box-shadow: 0 8px 24px rgba(212,165,68,0.3);
-}
-.btn-secondary {
-  background: rgba(255,255,255,0.06);
-  color: var(--cream);
-  border: 1px solid rgba(243,231,211,0.25);
-}
-.btn-share {
-  background: rgba(107,22,34,0.4);
-  color: var(--gold-bright);
-  border: 1px solid rgba(212,165,68,0.4);
-}
+.btn-primary { background: linear-gradient(135deg, var(--gold-bright), var(--marigold)); color: var(--smoke); box-shadow: 0 8px 24px rgba(212,165,68,0.3); }
+.btn-secondary { background: rgba(255,255,255,0.06); color: var(--cream); border: 1px solid rgba(243,231,211,0.25); }
+.btn-share { background: rgba(107,22,34,0.4); color: var(--gold-bright); border: 1px solid rgba(212,165,68,0.4); }
 .btn:disabled { opacity: 0.4; cursor: not-allowed; transform: none; }
-
-.unlock-note {
-  margin-top: 14px;
-  font-size: 12px;
-  color: rgba(243,231,211,0.5);
-  line-height: 1.6;
-}
+.unlock-note { margin-top: 14px; font-size: 12px; color: rgba(243,231,211,0.5); line-height: 1.6; }
 .unlock-note strong { color: var(--marigold); }
-
-/* ---------- About section (within shrine: deity story) ---------- */
-.shrine-about {
-  margin-top: 36px;
-  text-align: left;
-  padding-top: 24px;
-  border-top: 1px solid rgba(212,165,68,0.15);
-}
-.shrine-about .label {
-  font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
-  color: rgba(212,165,68,0.6); margin-bottom: 12px;
-}
-.shrine-about p {
-  font-size: 14px; line-height: 1.75; color: rgba(243,231,211,0.78);
-  margin-bottom: 12px;
-}
+.shrine-about { margin-top: 36px; text-align: left; padding-top: 24px; border-top: 1px solid rgba(212,165,68,0.15); }
+.shrine-about .label { font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(212,165,68,0.6); margin-bottom: 12px; }
+.shrine-about p { font-size: 14px; line-height: 1.75; color: rgba(243,231,211,0.78); margin-bottom: 12px; }
+.shrine-about h3 { font-family: 'Cinzel', serif; font-size: 15px; color: var(--marigold); margin: 20px 0 8px; }
 .shrine-about strong { color: var(--marigold); }
-
-/* ---------- Daily blessing strip ---------- */
-.daily-strip {
-  margin-top: 32px;
-  padding: 20px;
-  border-top: 1px solid rgba(212,165,68,0.2);
-  border-bottom: 1px solid rgba(212,165,68,0.2);
-  text-align: left;
-}
-.daily-strip .label {
-  font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
-  color: rgba(212,165,68,0.6); margin-bottom: 8px;
-}
-.daily-strip .verse {
-  font-size: 14px; line-height: 1.7; color: rgba(243,231,211,0.85);
-  font-style: italic;
-}
-.daily-strip .verse-source {
-  margin-top: 10px; font-size: 11px; letter-spacing: 0.04em;
-  color: rgba(212,165,68,0.5); font-style: normal;
-}
-
-.ad-slot.inline {
-  margin: 36px auto 0;
-  min-height: 100px;
-}
-
-/* ---------- Toast ---------- */
-.toast {
-  position: fixed;
-  bottom: 28px; left: 50%;
-  transform: translateX(-50%) translateY(20px);
-  background: var(--gold-bright);
-  color: var(--smoke);
-  padding: 12px 24px;
-  border-radius: 30px;
-  font-size: 13.5px;
-  font-weight: 600;
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0.35s ease;
-  z-index: 100;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-  white-space: nowrap;
-  max-width: 90vw;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
+.daily-strip { margin-top: 32px; padding: 20px; border-top: 1px solid rgba(212,165,68,0.2); border-bottom: 1px solid rgba(212,165,68,0.2); text-align: left; }
+.daily-strip .label { font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(212,165,68,0.6); margin-bottom: 8px; }
+.daily-strip .verse { font-size: 14px; line-height: 1.7; color: rgba(243,231,211,0.85); font-style: italic; }
+.daily-strip .verse-source { margin-top: 10px; font-size: 11px; letter-spacing: 0.04em; color: rgba(212,165,68,0.5); font-style: normal; }
+.ad-slot.inline { margin: 36px auto 0; min-height: 100px; }
+.toast { position: fixed; bottom: 28px; left: 50%; transform: translateX(-50%) translateY(20px); background: var(--gold-bright); color: var(--smoke); padding: 12px 24px; border-radius: 30px; font-size: 13.5px; font-weight: 600; opacity: 0; pointer-events: none; transition: all 0.35s ease; z-index: 100; box-shadow: 0 10px 30px rgba(0,0,0,0.4); white-space: nowrap; max-width: 90vw; overflow: hidden; text-overflow: ellipsis; }
 .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
-
-/* ---------- Footer ---------- */
-footer {
-  position: relative; z-index: 5;
-  text-align: center;
-  padding: 30px 20px 50px;
-  font-size: 11.5px;
-  color: rgba(243,231,211,0.35);
-  line-height: 1.8;
-}
+footer { position: relative; z-index: 5; text-align: center; padding: 30px 20px 50px; font-size: 11.5px; color: rgba(243,231,211,0.35); line-height: 1.8; }
 footer a { color: rgba(212,165,68,0.6); text-decoration: none; }
-
-/* ---------- Ad mock modal (simulated rewarded ad) ---------- */
-.ad-modal-overlay {
-  display: none;
-  position: fixed; inset: 0; z-index: 200;
-  background: rgba(0,0,0,0.85);
-  align-items: center; justify-content: center;
-}
+.ad-modal-overlay { display: none; position: fixed; inset: 0; z-index: 200; background: rgba(0,0,0,0.85); align-items: center; justify-content: center; }
 .ad-modal-overlay.active { display: flex; }
-.ad-modal {
-  background: var(--deep-maroon);
-  border: 1px solid rgba(212,165,68,0.4);
-  border-radius: 10px;
-  padding: 36px 28px;
-  max-width: 320px;
-  text-align: center;
-}
-.ad-modal-label {
-  font-size: 10.5px; letter-spacing: 0.15em; text-transform: uppercase;
-  color: rgba(212,165,68,0.6); margin-bottom: 14px;
-}
-.ad-timer-ring {
-  width: 64px; height: 64px;
-  margin: 0 auto 18px;
-  border-radius: 50%;
-  border: 3px solid rgba(212,165,68,0.2);
-  border-top-color: var(--gold-bright);
-  animation: spin 1s linear infinite;
-}
+.ad-modal { background: var(--deep-maroon); border: 1px solid rgba(212,165,68,0.4); border-radius: 10px; padding: 36px 28px; max-width: 320px; text-align: center; }
+.ad-modal-label { font-size: 10.5px; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(212,165,68,0.6); margin-bottom: 14px; }
+.ad-timer-ring { width: 64px; height: 64px; margin: 0 auto 18px; border-radius: 50%; border: 3px solid rgba(212,165,68,0.2); border-top-color: var(--gold-bright); animation: spin 1s linear infinite; }
 @keyframes spin { to { transform: rotate(360deg); } }
 .ad-modal p { font-size: 13px; color: rgba(243,231,211,0.7); }
-
-/* ---------- Static pages (About / Privacy / Contact) ---------- */
-.static-page {
-  position: relative; z-index: 5;
-  max-width: 680px;
-  margin: 0 auto;
-  padding: 36px 20px 60px;
-}
-.static-page h1 {
-  font-family: 'Cinzel', serif;
-  font-size: clamp(24px, 6vw, 34px);
-  color: var(--gold-bright);
-  margin-bottom: 18px;
-}
-.static-page h2 {
-  font-family: 'Cinzel', serif;
-  font-size: 18px;
-  color: var(--marigold);
-  margin: 28px 0 10px;
-}
-.static-page p, .static-page li {
-  font-size: 14px; line-height: 1.75; color: rgba(243,231,211,0.78);
-  margin-bottom: 14px;
-}
-.static-page ul { padding-left: 20px; margin-bottom: 14px; }
-.static-page a { color: var(--gold-bright); }
-.static-page .updated {
-  font-size: 12px; color: rgba(243,231,211,0.45); margin-bottom: 28px;
-}
-.contact-info {
-  background: rgba(0,0,0,0.3);
-  border: 1px solid rgba(212,165,68,0.25);
-  border-radius: 8px;
-  padding: 20px;
-  margin-top: 16px;
-}
-.contact-info p { margin-bottom: 8px; }
-
-/* Note: mobile sizing is the default (mobile-first).
-   Desktop enhancements are applied via min-width queries above. */
-
 </style>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8054274022999562" crossorigin="anonymous"></script>
-<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-TCWE1XRRET"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-TCWE1XRRET');
 </script>
 </head>
 <body>
-
 <div class="grain"></div>
-
 <nav class="top-nav">
   <a href="index.html">Home</a>
   <a href="about.html">About</a>
   <a href="contact.html">Contact</a>
   <a href="privacy.html">Privacy</a>
 </nav>
-
 <div class="shrine-backdrop" style="background-image: url('https://cdn.pixabay.com/photo/2024/05/14/15/24/hanuman-8761491_1280.png');"></div>
-
 <div class="shrine-inner" style="padding-top: 36px;">
   <img class="shrine-portrait" src="https://cdn.pixabay.com/photo/2024/05/14/15/24/hanuman-8761491_1280.png" alt="Lord Hanuman">
   <div class="shrine-name-script">श्री हनुमते नमः</div>
   <div class="shrine-name-en">Hanuman · Sankat Mochan</div>
   <p class="shrine-mantra">"Buddhir Balam Yasho Dhairyam Nirbhayatvam Arogata"</p>
-
   <div class="ad-slot leaderboard" style="margin-top:24px;">AD SLOT — 320×50 MOBILE / 728×90 DESKTOP (e.g. Google AdSense)</div>
-
   <div class="altar" id="altar-hanuman">
     <div class="altar-label">Your Offering</div>
     <div class="offering-stage">
@@ -641,7 +162,6 @@ footer a { color: rgba(212,165,68,0.6); text-decoration: none; }
       <div class="diya" id="diya-hanuman">🪔</div>
     </div>
     <div class="tier-badge" id="tier-hanuman">Simple Offering</div>
-
     <div class="offering-actions">
       <button class="btn btn-primary" onclick="lightDiya('hanuman')">Light a Diya — Free</button>
     </div>
@@ -649,25 +169,24 @@ footer a { color: rgba(212,165,68,0.6); text-decoration: none; }
       <button class="btn btn-share" onclick="shareTemple('hanuman', 'Hanuman', 'https://dailydarshan.online/hanuman.html')">Share to unlock Marigold Offering</button>
       <button class="btn btn-secondary" onclick="watchAd('hanuman')">Support with an ad ▸ unlock Full Aarti</button>
     </div>
-    <p class="unlock-note">
-      Lighting a diya is always free. <strong>Sharing</strong> or <strong>supporting with a short ad</strong>
-      simply makes your offering richer — flowers, incense, and a full aarti flame. Never required, always appreciated. 🙏
-    </p>
+    <p class="unlock-note">Lighting a diya is always free. <strong>Sharing</strong> or <strong>supporting with a short ad</strong> simply makes your offering richer — flowers, incense, and a full aarti flame. Never required, always appreciated. 🙏</p>
   </div>
 
   <div class="shrine-about">
     <div class="label">About Lord Hanuman</div>
-    
-          <p>Hanuman is the monkey-faced son of Vayu, the wind god, and one of the central figures of the
-          Ramayana. His devotion to Lord Rama is considered the model of selfless service — he crossed
-          oceans, carried mountains, and burned a kingdom to ash in service of dharma, asking nothing for
-          himself in return.</p>
-          <p>Devotees turn to Hanuman in moments that call for courage: before an exam, a difficult
-          conversation, a long journey, or simply a hard day. He is known as <strong>Sankat Mochan</strong>,
-          remover of troubles, and is traditionally worshipped on Tuesdays and Saturdays. The Hanuman
-          Chalisa, a forty-verse devotional poem composed by the 16th-century poet-saint Tulsidas, remains
-          one of the most widely recited texts in Hinduism, chanted by millions every single day.</p>
-        
+    <p>Hanuman is the monkey-faced son of Vayu, the wind god, and one of the central figures of the Ramayana. His devotion to Lord Rama is considered the model of selfless service — he crossed oceans, carried mountains, and burned a kingdom to ash in service of dharma, asking nothing for himself in return.</p>
+    <p>Devotees turn to Hanuman in moments that call for courage: before an exam, a difficult conversation, a long journey, or simply a hard day. He is known as <strong>Sankat Mochan</strong>, remover of troubles, and is traditionally worshipped on Tuesdays and Saturdays.</p>
+    <h3>The Story of Hanuman</h3>
+    <p>Born to the celestial nymph Anjana and Kesari, a vanara chieftain, Hanuman was blessed by Vayu, the god of wind, who is considered his divine father. As a child, Hanuman mistook the sun for a ripe fruit and leaped toward it — a story that speaks to his boundless energy and fearlessness from birth. The gods, alarmed, struck him down, and Vayu withdrew from the world in grief until Hanuman was restored and granted boons of strength, invincibility, and wisdom by Brahma, Shiva, and Indra.</p>
+    <p>It was in the service of Lord Rama that Hanuman's greatness fully revealed itself. When Sita, Rama's wife, was abducted by the demon king Ravana and taken to Lanka, it was Hanuman who leaped across the ocean, located Sita in the Ashoka grove, and brought back news that gave Rama's forces hope. During the great battle, when Rama's brother Lakshmana lay gravely wounded and only the Sanjeevani herb could save him, Hanuman flew to the Himalayas — and, unable to identify the correct plant, lifted the entire mountain and carried it back. This act of devotion under impossible pressure remains one of the most beloved moments in all of Hindu mythology.</p>
+    <h3>The Hanuman Chalisa</h3>
+    <p>The Hanuman Chalisa is a forty-verse devotional poem composed by the 16th-century poet-saint Tulsidas, written in the Awadhi dialect of Hindi. It remains one of the most widely recited texts in Hinduism, chanted by millions every single day. The word <em>chalisa</em> means forty in Hindi, corresponding to the poem's forty verses. Each verse distills a quality of Hanuman — his strength, his knowledge, his unwavering faith — and chanting the complete poem is considered a complete act of worship in itself.</p>
+    <p>Tulsidas himself, who also composed the Ramcharitmanas, is said to have encountered Hanuman directly as a result of his devotion. The Chalisa he wrote carries within it both the story of Hanuman and a living invocation: devotees report chanting it in fear, illness, grief, and uncertainty, and finding in the repetition a steadiness that did not depend on circumstances changing.</p>
+    <h3>Symbols and Iconography</h3>
+    <p>Hanuman is typically depicted with an orange or red body — orange associated with celibacy, renunciation, and the fire of devotion, and red with the sindoor (vermilion) that devotees apply to his image as a mark of love. He is shown carrying a gada (mace) in one hand and the Sanjeevani mountain in the other, or sometimes tearing open his chest to reveal Rama and Sita residing in his heart — the definitive image of bhakti, the idea that the beloved deity literally lives inside the devotee.</p>
+    <p>His vehicle is none — Hanuman needs no mount. He flies under his own power, a reminder that true devotion carries you where you need to go.</p>
+    <h3>When Devotees Pray to Hanuman</h3>
+    <p>Hanuman is prayed to before physical challenges, competitive exams, surgery, legal proceedings, travel over long distances, and any situation where courage is the primary need. He is also considered especially protective of those who feel threatened by evil spirits or negative energies — temples dedicated to him often stand at crossroads and boundaries, places where the world's edges meet. Tuesday and Saturday are his sacred days, and many devotees observe a fast on these days, eating only one meal or abstaining from certain foods as an act of discipline in his honour.</p>
   </div>
 
   <div class="daily-strip">
@@ -675,16 +194,12 @@ footer a { color: rgba(212,165,68,0.6); text-decoration: none; }
     <div class="verse" id="verse-hanuman">Loading today's verse…</div>
     <div class="verse-source" id="source-hanuman"></div>
   </div>
-
   <div class="ad-slot inline">AD SLOT — 300×250 IN-CONTENT (e.g. Google AdSense)</div>
-
   <div class="shrine-about" style="text-align:center;">
     <div class="label">Other Shrines</div>
     <p style="font-size:13px;"><a href="shiva.html">Lord Shiva</a> · <a href="ganesha.html">Lord Ganesha</a> · <a href="lakshmi.html">Goddess Lakshmi</a> · <a href="krishna.html">Lord Krishna</a></p>
   </div>
 </div>
-
-<!-- ============ SIMULATED REWARDED AD MODAL ============ -->
 <div class="ad-modal-overlay" id="ad-modal">
   <div class="ad-modal">
     <div class="ad-modal-label">Supporting the temple</div>
@@ -692,29 +207,17 @@ footer a { color: rgba(212,165,68,0.6); text-decoration: none; }
     <p>Loading a short sponsor message…<br>your offering will be enriched in a moment.</p>
   </div>
 </div>
-
 <div class="toast" id="toast"></div>
-
 <footer>
-  Deity images used under the Pixabay Content License. Daily Darshan is an independent devotional space
-  and is not affiliated with any temple trust or religious organisation.<br>
+  Deity images used under the Pixabay Content License. Daily Darshan is an independent devotional space and is not affiliated with any temple trust or religious organisation.<br>
   <a href="index.html">Home</a> · <a href="about.html">About</a> · <a href="contact.html">Contact</a> · <a href="privacy.html">Privacy Policy</a>
 </footer>
-
 <script>
-// ==========================================================================
-// DAILY VERSE ROTATION
-// Uses (day-of-year % library.length) so the sequence repeats every year.
-// Every verse has a named, verifiable source (see deity_data.py for the
-// full source list) — nothing here is invented.
-// ==========================================================================
-
 function dayOfYear(date) {
   const start = new Date(date.getFullYear(), 0, 0);
   const diff = date - start;
   return Math.floor(diff / (1000 * 60 * 60 * 24));
 }
-
 function loadDailyVerse(deityKey, verses) {
   const today = dayOfYear(new Date());
   const verse = verses[today % verses.length];
@@ -723,34 +226,24 @@ function loadDailyVerse(deityKey, verses) {
   if (textEl) textEl.textContent = '"' + verse.text + '"';
   if (sourceEl) sourceEl.textContent = '— ' + verse.source;
 }
-
-// ---------- State (in-memory only, no localStorage per platform rules) ----------
 const offeringState = {};
-
 const TIERS = [
   { name: 'Simple Offering', icon: '🪔' },
   { name: 'Marigold Offering', icon: '🪔🌼' },
   { name: 'Full Aarti', icon: '🪔🌼🔥' }
 ];
-
-function initOffering(deityKey) {
-  offeringState[deityKey] = { tier: 0, count: 0 };
-}
-
+function initOffering(deityKey) { offeringState[deityKey] = { tier: 0, count: 0 }; }
 function showToast(msg) {
   const t = document.getElementById('toast');
-  t.textContent = msg;
-  t.classList.add('show');
+  t.textContent = msg; t.classList.add('show');
   clearTimeout(t._timer);
   t._timer = setTimeout(() => t.classList.remove('show'), 2600);
 }
-
 function renderTier(deity) {
   const tierInfo = TIERS[offeringState[deity].tier];
   document.getElementById('tier-' + deity).textContent = tierInfo.name;
   document.getElementById('diya-' + deity).textContent = tierInfo.icon;
 }
-
 function lightDiya(deity) {
   offeringState[deity].count++;
   const diya = document.getElementById('diya-' + deity);
@@ -759,13 +252,8 @@ function lightDiya(deity) {
   const count = offeringState[deity].count;
   showToast('🙏 Your diya has been lit. ' + count + ' offering' + (count > 1 ? 's' : '') + ' so far today.');
 }
-
 function shareTemple(deity, deityName, pageUrl) {
-  const shareData = {
-    title: 'Daily Darshan',
-    text: 'I lit a diya for Lord ' + deityName + ' today on Daily Darshan 🪔 — light one for someone you love.',
-    url: pageUrl
-  };
+  const shareData = { title: 'Daily Darshan', text: 'I lit a diya for Lord ' + deityName + ' today on Daily Darshan 🪔 — light one for someone you love.', url: pageUrl };
   if (navigator.share) {
     navigator.share(shareData).then(() => unlockTier(deity, 1)).catch(() => {});
   } else {
@@ -774,72 +262,60 @@ function shareTemple(deity, deityName, pageUrl) {
     unlockTier(deity, 1);
   }
 }
-
 function watchAd(deity) {
   const modal = document.getElementById('ad-modal');
   modal.classList.add('active');
-  setTimeout(() => {
-    modal.classList.remove('active');
-    unlockTier(deity, 2);
-    showToast('🌼 Thank you for supporting the temple. Offering enriched!');
-  }, 2200);
+  setTimeout(() => { modal.classList.remove('active'); unlockTier(deity, 2); showToast('🌼 Thank you for supporting the temple. Offering enriched!'); }, 2200);
 }
-
 function unlockTier(deity, minTier) {
-  if (offeringState[deity].tier < minTier) {
-    offeringState[deity].tier = minTier;
-    renderTier(deity);
-  }
+  if (offeringState[deity].tier < minTier) { offeringState[deity].tier = minTier; renderTier(deity); }
 }
-
-
-  initOffering('hanuman');
-  loadDailyVerse('hanuman', [
-      { text: "With the dust of my Guru's lotus feet, I first cleanse the mirror of my mind, then narrate the pure glory of Sri Raghubar (Rama), giver of the four fruits of life.", source: 'Hanuman Chalisa, Opening Doha 1' },
-      { text: 'Knowing myself to be without wisdom, I remember you, O Hanuman, son of the Wind-God. Grant me strength, wisdom and knowledge, and remove my afflictions and faults.', source: 'Hanuman Chalisa, Opening Doha 2' },
-      { text: 'Victory to you, Hanuman, ocean of wisdom and virtue. Victory to you, chief of the monkeys, who illuminates the three worlds.', source: 'Hanuman Chalisa, Verse 1' },
-      { text: 'You are the messenger of Lord Rama, abode of incomparable strength, son of Mother Anjana, known as the son of the Wind-God.', source: 'Hanuman Chalisa, Verse 2' },
-      { text: 'Great hero, mighty as a thunderbolt, dispeller of evil thoughts, companion of good wisdom.', source: 'Hanuman Chalisa, Verse 3' },
-      { text: 'Golden of hue, beautifully adorned, with earrings in your ears and curly hair.', source: 'Hanuman Chalisa, Verse 4' },
-      { text: 'In your hands you hold a mace and a banner; a sacred thread of munja grass adorns your shoulder.', source: 'Hanuman Chalisa, Verse 5' },
-      { text: 'Son of Shiva, joy of Kesari, your glory and might are worshipped throughout the world.', source: 'Hanuman Chalisa, Verse 6' },
-      { text: "Wise, virtuous and supremely skilled, ever eager to accomplish Rama's tasks.", source: 'Hanuman Chalisa, Verse 7' },
-      { text: "Delighting in hearing of the Lord's deeds, Rama, Lakshmana and Sita dwell in your heart.", source: 'Hanuman Chalisa, Verse 8' },
-      { text: "Appearing in a minute form before Sita, you showed Ravana's Lanka a form so vast it was set ablaze.", source: 'Hanuman Chalisa, Verse 9' },
-      { text: 'Taking a fearsome form, you destroyed the demons, accomplishing every task for Sri Ramachandra.', source: 'Hanuman Chalisa, Verse 10' },
-      { text: 'You brought the Sanjeevani herb and revived Lakshmana — Sri Raghubir embraced you with great joy.', source: 'Hanuman Chalisa, Verse 11' },
-      { text: "Sri Rama praised you greatly: 'You are as dear to me as my brother Bharat.'", source: 'Hanuman Chalisa, Verse 12' },
-      { text: "'May the thousand-mouthed serpent sing your glory' — so saying, Sri Rama drew you to his heart.", source: 'Hanuman Chalisa, Verse 13' },
-      { text: 'Sanak and the sages, Brahma and other gods, Narada, Saraswati, and the king of serpents all sing your praise.', source: 'Hanuman Chalisa, Verse 14' },
-      { text: 'Yama, Kubera, the guardians of the directions, poets and scholars — none can fully describe your glory.', source: 'Hanuman Chalisa, Verse 15' },
-      { text: 'You rendered great service to Sugriva, uniting him with Rama and restoring his royal throne.', source: 'Hanuman Chalisa, Verse 16' },
-      { text: 'Vibhishana heeded your counsel, and through it became the King of Lanka — the whole world knows this.', source: 'Hanuman Chalisa, Verse 17' },
-      { text: 'You swallowed the sun, thousands of yojanas away, mistaking it for a sweet fruit.', source: 'Hanuman Chalisa, Verse 18' },
-      { text: "Holding Lord Rama's ring in your mouth, you leapt across the ocean — no wonder at all for you.", source: 'Hanuman Chalisa, Verse 19' },
-      { text: 'Every difficult task in this world becomes easy by your grace.', source: 'Hanuman Chalisa, Verse 20' },
-      { text: "You are the guardian at Rama's door; none may enter without your leave.", source: 'Hanuman Chalisa, Verse 21' },
-      { text: 'All comfort is found by taking your refuge; under your protection, there is nothing to fear.', source: 'Hanuman Chalisa, Verse 22' },
-      { text: 'You alone can withstand your own splendour; the three worlds tremble at your roar.', source: 'Hanuman Chalisa, Verse 23' },
-      { text: 'Ghosts and evil spirits cannot come near one who utters the name of the mighty hero, Hanuman.', source: 'Hanuman Chalisa, Verse 24' },
-      { text: 'All disease and pain dissolve for one who chants the name of brave Hanuman without ceasing.', source: 'Hanuman Chalisa, Verse 25' },
-      { text: 'Hanuman frees from every difficulty the one who remembers him in thought, word, and deed.', source: 'Hanuman Chalisa, Verse 26' },
-      { text: 'Rama, the ascetic king, reigns above all, yet it is you who accomplish all his works.', source: 'Hanuman Chalisa, Verse 27' },
-      { text: 'Whoever brings any wish to you receives boundless fruit in this very life.', source: 'Hanuman Chalisa, Verse 28' },
-      { text: 'Your glory shines through all four ages, renowned and radiant throughout the world.', source: 'Hanuman Chalisa, Verse 29' },
-      { text: 'You are the protector of saints and sages, destroyer of demons, beloved of Rama.', source: 'Hanuman Chalisa, Verse 30' },
-      { text: 'You grant the eight siddhis and nine treasures — this boon was given to you by Mother Janaki.', source: 'Hanuman Chalisa, Verse 31' },
-      { text: 'You hold the very essence of devotion to Rama; you remain forever his faithful servant.', source: 'Hanuman Chalisa, Verse 32' },
-      { text: 'Through devotion to you, one finds Rama, and the sorrows of countless lives are erased.', source: 'Hanuman Chalisa, Verse 33' },
-      { text: "At the end of life, one reaches Rama's eternal abode, and is forever known as a devotee of Hari.", source: 'Hanuman Chalisa, Verse 34' },
-      { text: 'Without worshipping any other deity, devotion to Hanuman alone brings every happiness.', source: 'Hanuman Chalisa, Verse 35' },
-      { text: 'Every difficulty and sorrow dissolves for one who contemplates the powerful, brave Hanuman.', source: 'Hanuman Chalisa, Verse 36' },
-      { text: 'Victory, victory, victory to you, Hanuman — bestow your grace upon us as our supreme teacher.', source: 'Hanuman Chalisa, Verse 37' },
-      { text: 'Whoever recites this Chalisa a hundred times is released from all bondage and attains great bliss.', source: 'Hanuman Chalisa, Verse 38' },
-      { text: 'Whoever reads this Hanuman Chalisa attains perfection — Lord Shiva himself is witness to it.', source: 'Hanuman Chalisa, Verse 39' },
-      { text: 'Tulsidas, forever the servant of Hari, prays: O Lord, make my heart your eternal dwelling place.', source: 'Hanuman Chalisa, Verse 40' },
-      { text: 'O Son of the Wind, remover of distress, embodiment of all that is auspicious — dwell in my heart together with Rama, Lakshmana, and Sita.', source: 'Hanuman Chalisa, Closing Doha' }
-    ]);
+initOffering('hanuman');
+loadDailyVerse('hanuman', [
+  { text: "With the dust of my Guru's lotus feet, I first cleanse the mirror of my mind, then narrate the pure glory of Sri Raghubar (Rama), giver of the four fruits of life.", source: 'Hanuman Chalisa, Opening Doha 1' },
+  { text: 'Knowing myself to be without wisdom, I remember you, O Hanuman, son of the Wind-God. Grant me strength, wisdom and knowledge, and remove my afflictions and faults.', source: 'Hanuman Chalisa, Opening Doha 2' },
+  { text: 'Victory to you, Hanuman, ocean of wisdom and virtue. Victory to you, chief of the monkeys, who illuminates the three worlds.', source: 'Hanuman Chalisa, Verse 1' },
+  { text: 'You are the messenger of Lord Rama, abode of incomparable strength, son of Mother Anjana, known as the son of the Wind-God.', source: 'Hanuman Chalisa, Verse 2' },
+  { text: 'Great hero, mighty as a thunderbolt, dispeller of evil thoughts, companion of good wisdom.', source: 'Hanuman Chalisa, Verse 3' },
+  { text: 'Golden of hue, beautifully adorned, with earrings in your ears and curly hair.', source: 'Hanuman Chalisa, Verse 4' },
+  { text: 'In your hands you hold a mace and a banner; a sacred thread of munja grass adorns your shoulder.', source: 'Hanuman Chalisa, Verse 5' },
+  { text: 'Son of Shiva, joy of Kesari, your glory and might are worshipped throughout the world.', source: 'Hanuman Chalisa, Verse 6' },
+  { text: "Wise, virtuous and supremely skilled, ever eager to accomplish Rama's tasks.", source: 'Hanuman Chalisa, Verse 7' },
+  { text: "Delighting in hearing of the Lord's deeds, Rama, Lakshmana and Sita dwell in your heart.", source: 'Hanuman Chalisa, Verse 8' },
+  { text: "Appearing in a minute form before Sita, you showed Ravana's Lanka a form so vast it was set ablaze.", source: 'Hanuman Chalisa, Verse 9' },
+  { text: 'Taking a fearsome form, you destroyed the demons, accomplishing every task for Sri Ramachandra.', source: 'Hanuman Chalisa, Verse 10' },
+  { text: 'You brought the Sanjeevani herb and revived Lakshmana — Sri Raghubir embraced you with great joy.', source: 'Hanuman Chalisa, Verse 11' },
+  { text: "Sri Rama praised you greatly: 'You are as dear to me as my brother Bharat.'", source: 'Hanuman Chalisa, Verse 12' },
+  { text: "'May the thousand-mouthed serpent sing your glory' — so saying, Sri Rama drew you to his heart.", source: 'Hanuman Chalisa, Verse 13' },
+  { text: 'Sanak and the sages, Brahma and other gods, Narada, Saraswati, and the king of serpents all sing your praise.', source: 'Hanuman Chalisa, Verse 14' },
+  { text: 'Yama, Kubera, the guardians of the directions, poets and scholars — none can fully describe your glory.', source: 'Hanuman Chalisa, Verse 15' },
+  { text: 'You rendered great service to Sugriva, uniting him with Rama and restoring his royal throne.', source: 'Hanuman Chalisa, Verse 16' },
+  { text: 'Vibhishana heeded your counsel, and through it became the King of Lanka — the whole world knows this.', source: 'Hanuman Chalisa, Verse 17' },
+  { text: 'You swallowed the sun, thousands of yojanas away, mistaking it for a sweet fruit.', source: 'Hanuman Chalisa, Verse 18' },
+  { text: "Holding Lord Rama's ring in your mouth, you leapt across the ocean — no wonder at all for you.", source: 'Hanuman Chalisa, Verse 19' },
+  { text: 'Every difficult task in this world becomes easy by your grace.', source: 'Hanuman Chalisa, Verse 20' },
+  { text: "You are the guardian at Rama's door; none may enter without your leave.", source: 'Hanuman Chalisa, Verse 21' },
+  { text: 'All comfort is found by taking your refuge; under your protection, there is nothing to fear.', source: 'Hanuman Chalisa, Verse 22' },
+  { text: 'You alone can withstand your own splendour; the three worlds tremble at your roar.', source: 'Hanuman Chalisa, Verse 23' },
+  { text: 'Ghosts and evil spirits cannot come near one who utters the name of the mighty hero, Hanuman.', source: 'Hanuman Chalisa, Verse 24' },
+  { text: 'All disease and pain dissolve for one who chants the name of brave Hanuman without ceasing.', source: 'Hanuman Chalisa, Verse 25' },
+  { text: 'Hanuman frees from every difficulty the one who remembers him in thought, word, and deed.', source: 'Hanuman Chalisa, Verse 26' },
+  { text: 'Rama, the ascetic king, reigns above all, yet it is you who accomplish all his works.', source: 'Hanuman Chalisa, Verse 27' },
+  { text: 'Whoever brings any wish to you receives boundless fruit in this very life.', source: 'Hanuman Chalisa, Verse 28' },
+  { text: 'Your glory shines through all four ages, renowned and radiant throughout the world.', source: 'Hanuman Chalisa, Verse 29' },
+  { text: 'You are the protector of saints and sages, destroyer of demons, beloved of Rama.', source: 'Hanuman Chalisa, Verse 30' },
+  { text: 'You grant the eight siddhis and nine treasures — this boon was given to you by Mother Janaki.', source: 'Hanuman Chalisa, Verse 31' },
+  { text: 'You hold the very essence of devotion to Rama; you remain forever his faithful servant.', source: 'Hanuman Chalisa, Verse 32' },
+  { text: 'Through devotion to you, one finds Rama, and the sorrows of countless lives are erased.', source: 'Hanuman Chalisa, Verse 33' },
+  { text: "At the end of life, one reaches Rama's eternal abode, and is forever known as a devotee of Hari.", source: 'Hanuman Chalisa, Verse 34' },
+  { text: 'Without worshipping any other deity, devotion to Hanuman alone brings every happiness.', source: 'Hanuman Chalisa, Verse 35' },
+  { text: 'Every difficulty and sorrow dissolves for one who contemplates the powerful, brave Hanuman.', source: 'Hanuman Chalisa, Verse 36' },
+  { text: 'Victory, victory, victory to you, Hanuman — bestow your grace upon us as our supreme teacher.', source: 'Hanuman Chalisa, Verse 37' },
+  { text: 'Whoever recites this Chalisa a hundred times is released from all bondage and attains great bliss.', source: 'Hanuman Chalisa, Verse 38' },
+  { text: 'Whoever reads this Hanuman Chalisa attains perfection — Lord Shiva himself is witness to it.', source: 'Hanuman Chalisa, Verse 39' },
+  { text: 'Tulsidas, forever the servant of Hari, prays: O Lord, make my heart your eternal dwelling place.', source: 'Hanuman Chalisa, Verse 40' },
+  { text: 'O Son of the Wind, remover of distress, embodiment of all that is auspicious — dwell in my heart together with Rama, Lakshmana, and Sita.', source: 'Hanuman Chalisa, Closing Doha' }
+]);
 </script>
-
 </body>
 </html>
