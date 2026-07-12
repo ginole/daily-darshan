@@ -29,8 +29,11 @@ html { -webkit-text-size-adjust: 100%; }
 body {
   background: var(--smoke);
   background-image:
-    radial-gradient(ellipse at top, rgba(107,22,34,0.4) 0%, transparent 60%),
-    radial-gradient(ellipse at bottom, rgba(43,15,18,0.6) 0%, transparent 60%);
+    radial-gradient(ellipse 60% 38% at 50% 6%, rgba(244,201,93,0.22) 0%, transparent 58%),
+    radial-gradient(ellipse at top, rgba(107,22,34,0.55) 0%, transparent 65%),
+    radial-gradient(ellipse at bottom, rgba(43,15,18,0.78) 0%, transparent 60%),
+    linear-gradient(180deg, #200e11 0%, #140708 100%);
+  background-attachment: fixed;
   color: var(--cream);
   font-family: var(--font-body);
   min-height: 100vh;
@@ -635,6 +638,7 @@ footer a { color: rgba(212,165,68,0.6); text-decoration: none; }
   Daily Darshan is a quiet space to begin or close your day — five shrines, five traditions of devotion,
   open whenever you need a moment of stillness. Choose a deity below to light a diya and read today's verse.
 </p>
+<p id="streak-badge" style="position:relative;z-index:5;text-align:center;margin:-16px 0 28px;font-size:12px;letter-spacing:0.08em;color:var(--marigold);min-height:16px;"></p>
 
 <main class="deity-grid">
 
@@ -700,5 +704,19 @@ footer a { color: rgba(212,165,68,0.6); text-decoration: none; }
   <a href="about.html">About</a> · <a href="contact.html">Contact</a> · <a href="privacy.html">Privacy Policy</a>
 </footer>
 
+<script>
+function toDateStr(d) { return d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate(); }
+function updateStreak() {
+  let s = { count: 0, last: null };
+  try { const r = localStorage.getItem('dd_streak'); if (r) s = JSON.parse(r); } catch (e) {}
+  return s.count;
+}
+function renderStreak() {
+  const n = updateStreak();
+  const el = document.getElementById('streak-badge');
+  if (el && n > 0) el.textContent = n === 1 ? '🔥 Day 1 of your practice' : '🔥 ' + n + '-day streak — welcome back';
+}
+renderStreak();
+</script>
 </body>
 </html>
