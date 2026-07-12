@@ -1,0 +1,13 @@
+{
+  "name": "Daily Darshan",
+  "short_name": "Daily Darshan",
+  "description": "Light a diya, offer prayer, and read daily verses for nine deities.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#1a0a0c",
+  "theme_color": "#6b1622",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
