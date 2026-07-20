@@ -303,6 +303,7 @@ function lightDiya(deity) {
   setTimeout(() => diya.style.transform = '', 250);
   const count = offeringState[deity].count;
   saveOffering(deity, offeringState[deity]);
+  if (typeof gtag === 'function') gtag('event', 'light_diya', { deity: deity, offering_count: count });
   showToast('🙏 Your diya has been lit. ' + count + ' offering' + (count > 1 ? 's' : '') + ' so far.');
 }
 function shareTemple(deity, deityName, pageUrl) {
